@@ -1,6 +1,7 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaManager.Models;
+using SocialMediaManager.Data;
 
 
 var builder = WebApplication.CreateBuilder(args);
