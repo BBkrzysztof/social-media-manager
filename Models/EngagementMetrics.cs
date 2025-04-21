@@ -1,6 +1,6 @@
 namespace SocialMediaManager.Models;
 
-class EngagementMetrics: BaseModel
+public class EngagementMetrics: BaseModel
 {
     public int Likes {get; set;} = 0;
 

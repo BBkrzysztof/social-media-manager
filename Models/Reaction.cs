@@ -1,6 +1,6 @@
 namespace SocialMediaManager.Models;
 
-class Reaction: BaseModel
+public class Reaction: BaseModel
 {
     public required string Type {get; set;}//@todo refactor to enum
     public int Count {get; set;}

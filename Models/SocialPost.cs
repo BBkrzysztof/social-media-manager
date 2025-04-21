@@ -1,16 +1,15 @@
 namespace SocialMediaManager.Models;
 
-class SocialPost: BaseModel
+public class SocialPost: BaseModel
 {
     public required string Status {get; set;} //@todo refactor to enum 
 
     //relations 
-    //@todo uncoment when models SocialAccount, Post exists
     public Guid SocialAccountId {get; set;}
-    // public SocialAccount {get; set;}
+    public required SocialAccount SocialAccount { get; set;}
 
     public Guid PostId {get; set;}
-    // public Post Post {get; set;}
+    public required Post Post {get; set;}
 
     public ICollection<Comment> Comments { get; set; } = new List<Comment>();
 

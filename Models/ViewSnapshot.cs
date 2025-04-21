@@ -1,6 +1,6 @@
 namespace SocialMediaManager.Models;
 
-class ViewSnapshot: BaseModel
+public class ViewSnapshot: BaseModel
 {
     public required int ViewCount {get; set;}
     public required DateTime SnapshotTime {get; set;}

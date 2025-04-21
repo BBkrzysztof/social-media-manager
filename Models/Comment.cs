@@ -1,6 +1,6 @@
 namespace SocialMediaManager.Models;
 
-class Comment: BaseModel
+public class Comment: BaseModel
 {
     public required string UserName {get; set;}
 
