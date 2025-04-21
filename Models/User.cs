@@ -1,13 +1,16 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿namespace SocialMediaManager.Models;
+
+using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace SocialMediaManager.Models
+public class User : IdentityUser
 {
-    public class User : IdentityUser
-    {
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
-        public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+    public DateTime UpdatedAt { get; set; } = DateTime.UtcNow;
 
-        // Identity User already has email, username, password, etc.
-    }
+    // Back relations
+    public ICollection<SocialAccount> SocialAccounts { get; set; } = new List<SocialAccount>();
+    public ICollection<Post> Posts { get; set; } = new List<Post>();
+
+    // Identity User already has email, username, password, etc.
 }
