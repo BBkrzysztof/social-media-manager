@@ -1,0 +1,19 @@
+{
+    "sqltools.connections": [
+
+
+        {
+            "previewLimit": 50,
+            "server": "sqlserver",
+            "port": 1433,
+            "driver": "MySQL",
+            "name": "MyDatabase",
+            "group": "MyDatabase",
+            "database": "MyDatabase",
+            "username": "sa",
+            "password": "YourStrong!Passw0rd",
+            "encrypt": false,
+            "trustServerCertificate": true
+        },
+    ]
+}
