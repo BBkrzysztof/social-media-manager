@@ -1,19 +1,19 @@
 {
     "sqltools.connections": [
-
-
         {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
             "previewLimit": 50,
-            "server": "sqlserver",
-            "port": 1433,
+            "server": "localhost",
+            "port": 3306,
             "driver": "MySQL",
-            "name": "MyDatabase",
-            "group": "MyDatabase",
+            "name": "app",
+            "group": "app",
             "database": "MyDatabase",
-            "username": "sa",
-            "password": "YourStrong!Passw0rd",
-            "encrypt": false,
-            "trustServerCertificate": true
-        },
+            "username": "root",
+            "password": "YourStrong!Passw0rd"
+        }
     ]
 }
