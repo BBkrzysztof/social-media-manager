@@ -1,0 +1,29 @@
+@model SocialMediaManager.Dto.Auth.LoginDTO
+
+<form asp-action="Login" method="post">
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" asp-for="Email" required />
+    </div>
+    <div>
+        <label for="Password">Hasło:</label>
+        <input type="password" id="Password" name="Password" asp-for="Password" required />
+    </div>
+    <button type="submit">Zaloguj</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <ul class="text-danger">
+        @foreach (var entry in ViewData.ModelState)
+        {
+            foreach (var error in entry.Value.Errors)
+            {
+                <li><strong>@entry.Key:</strong> @error.ErrorMessage</li>
+            }
+        }
+    </ul>
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
