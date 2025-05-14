@@ -1,0 +1,40 @@
+@model SocialMediaManager.Dto.Auth.RegisterDTO
+
+<form asp-action="Register" method="post">
+    <div>
+        <label for="Email">Email:</label>
+        <input type="email" id="Email" name="Email" asp-for="Email" required />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="Password">Hasło:</label>
+        <input type="password" id="Password" name="Password" asp-for="Password" required />
+        <span asp-validation-for="Password" class="text-danger"></span>
+
+    </div>
+    <div>
+        <label for="ConfirmPassword">Potwierdź Hasło:</label>
+        <input type="password" id="ConfirmPassword" name="ConfirmPassword" asp-for="ConfirmPassword" required />
+        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+
+    </div>
+    <button type="submit">Zarejestruj</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <ul class="text-danger">
+        @foreach (var entry in ViewData.ModelState)
+        {
+            foreach (var error in entry.Value.Errors)
+            {
+                <li><strong>@entry.Key:</strong> @error.ErrorMessage</li>
+            }
+        }
+    </ul>
+}
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

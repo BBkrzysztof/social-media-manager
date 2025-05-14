@@ -6,6 +6,6 @@ public class ViewSnapshot: BaseModel
     public required DateTime SnapshotTime {get; set;}
 
     //relations 
-    public Guid SoialPostId {get; set;}
+    public Guid SocialPostId {get; set;}
     public required SocialPost SocialPost {get; set;}
 }
