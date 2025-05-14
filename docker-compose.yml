@@ -1,14 +1,15 @@
 version: '3.8'
 
 services:
-  sqlserver:
-    image: mcr.microsoft.com/mssql/server:2022-latest
-    container_name: sqlserver
+  mysql:
+    image: mysql:8.0
+    container_name: mysql
     environment:
-      SA_PASSWORD: "YourStrong!Passw0rd"
-      ACCEPT_EULA: "Y"
+      MYSQL_ROOT_PASSWORD: "YourStrong!Passw0rd"
+      MYSQL_DATABASE: "MyDatabase"
+
     ports:
-      - "1433:1433"
+      - "3306:3306"
 
   app:
     build: .
@@ -16,8 +17,6 @@ services:
       - ./:/app
     container_name: myaspnetapp
     depends_on:
-      - sqlserver
-    environment:
-      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=MyDatabase;User Id=sa;Password=YourStrong!Passw0rd;TrustServerCertificate=True;Encrypt=False;
+      - mysql
     ports:
       - "5000:5000"
