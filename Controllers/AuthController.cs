@@ -27,11 +27,12 @@ public class AuthController : Controller
             _context = context;
         }
 
- // Rejestracja
-        [HttpGet("register")]
-        public IActionResult Register()
-        {
-            return View();
+    // Rejestracja
+    [HttpGet("register")]
+    public IActionResult Register()
+    {
+        return View();
+            
         }
 
         [HttpPost("register")]
