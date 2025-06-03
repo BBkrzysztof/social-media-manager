@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 
 bin/
 obj/
+
+wwwroot/uploads/*
