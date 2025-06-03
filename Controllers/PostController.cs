@@ -86,12 +86,18 @@ public class PostController : Controller
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Index", "Home");
+        return RedirectToAction("Update",  new {id = post.Id});
     }
     
-    [HttpGet("update")]
-    public IActionResult Update()
+    [HttpGet("update/{id}")]
+    public IActionResult Update(Guid id)
     {
-        return View();
+        var model = _context.Posts.FirstOrDefault(e => e.Id == id);
+        if (model == null)
+        {
+            // return NotFound();
+        }
+
+        return View(model);
     }
 }
