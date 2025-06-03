@@ -16,7 +16,7 @@
                 </div>
             </div>
             <div class="">
-                <form method="post" asp-action="Create" class="row d-flex justify-content-center">
+                <form method="post" enctype="multipart/form-data" asp-action="Create" class="row d-flex justify-content-center">
                     <div class="col-md-6 col-xl-5">
                             <div class="p-3 p-xl-4">
                                 <!-- Start: Success Example -->
@@ -74,12 +74,6 @@
                                 </div>
                             </div>
                             <div class="d-flex align-items-center justify-content-xxl-start align-items-xxl-center p-3">
-                                <div class="bs-icon-md bs-icon-circle bs-icon-white shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-images text-primary">
-                                        <path d="M4.502 9a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3"></path>
-                                        <path d="M14.002 13a2 2 0 0 1-2 2h-10a2 2 0 0 1-2-2V5A2 2 0 0 1 2 3a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v8a2 2 0 0 1-1.998 2M14 2H4a1 1 0 0 0-1 1h9.002a2 2 0 0 1 2 2v7A1 1 0 0 0 15 11V3a1 1 0 0 0-1-1M2.002 4a1 1 0 0 0-1 1v8l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094l1.777 1.947V5a1 1 0 0 0-1-1h-10"></path>
-                                    </svg></div>
-                            </div>
-                            <div class="d-flex align-items-center justify-content-xxl-start align-items-xxl-center p-3">
                                 <div class="bs-icon-md bs-icon-circle bs-icon-white shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-broadcast text-primary">
                                         <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path>
                                     </svg></div>
@@ -91,7 +85,7 @@
                                     </div>
                                     <div class="row">
                                         <div class="col ms-0">
-                                            <select lass="form-select" asp-for="Platforms">
+                                            <select class="form-select" asp-for="Platforms">
                                                     @foreach (var platform in platformOptions)
                                                     {
                                                         <option value="@platform">@platform</option>
