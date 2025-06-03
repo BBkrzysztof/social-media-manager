@@ -1,0 +1,48 @@
+<footer class="bg-dark">
+    <div class="container py-4 py-lg-5">
+        <div class="row justify-content-center">
+            <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+                <h3 class="fs-6 fw-bold">Services</h3>
+                <ul class="list-unstyled">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/posts">Posts management</a></li>
+                        <li><a href="/posts/create">Posts creation</a></li>
+                        <li><a href="/metrics">Metrics</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+                <h3 class="fs-6 fw-bold">About</h3>
+                <ul class="list-unstyled">
+                    <li><a href="#">Our app</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column">
+                <h3 class="fs-6 fw-bold">Posts</h3>
+                <ul class="list-unstyled">
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li><a href="/posts">See your posts</a></li>
+                        <li><a href="/posts/create">Create new</a></li>
+                    }
+                </ul>
+            </div>
+            <div class="col-lg-3 text-center text-lg-start d-flex flex-column align-items-center order-first align-items-lg-start order-lg-last">
+                <div class="fw-bold d-flex align-items-center mb-2">
+                    <span class="bs-icon-sm bs-icon-circle bs-icon-primary d-flex justify-content-center align-items-center bs-icon me-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-bezier">
+                            <path fill-rule="evenodd" d="..." />
+                        </svg>
+                    </span>
+                    <span>Brand</span>
+                </div>
+                <p class="text-muted">Sem eleifend donec molestie, integer quisque orci aliquam.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="text-muted d-flex justify-content-between align-items-center pt-3">
+            <p class="mb-0">Copyright © 2025 Brand</p>
+        </div>
+    </div>
+</footer>
