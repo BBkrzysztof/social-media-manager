@@ -65,11 +65,12 @@ public class PostController : Controller
             using var stream = new FileStream(path, FileMode.Create);
             await file.CopyToAsync(stream);
 
-            mediaUrls.Add("/uploads/" + fileName);
+            mediaUrls = "/uploads/" + fileName;
 
         }
 
         string userId = _userManager.GetUserId(User);
+        var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
 
         var post = new Post
         {
@@ -79,11 +80,13 @@ public class PostController : Controller
             MediaUrls = mediaUrls,
             Platforms = dto.Platforms,
             UserId = userId,
+            User = user
         };
 
+        _context.Posts.Add(post);
+        await _context.SaveChangesAsync();
 
-
-        return View();
+        return RedirectToAction("Index", "Home");
     }
     
     [HttpGet("update")]

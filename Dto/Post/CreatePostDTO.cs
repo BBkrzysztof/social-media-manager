@@ -13,7 +13,7 @@ public class CreatePostDTO
 
     public DateTime? ScheduledAt { get; set; }
 
-    public string? MediaUrls { get; set; }
+    public IFormFile? MediaUrls { get; set; }
 
     [Required]
     [MinLength(1, ErrorMessage = "At least one platform must be selected.")]

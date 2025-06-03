@@ -91,11 +91,11 @@
                                     </div>
                                     <div class="row">
                                         <div class="col ms-0">
-                                            <select asp-for="Platforms"  class="form-select" multiple>
-                                                @foreach (var platform in platformOptions)
-                                                {
-                                                    <option value="@platform">@platform</option>
-                                                }
+                                            <select lass="form-select" asp-for="Platforms">
+                                                    @foreach (var platform in platformOptions)
+                                                    {
+                                                        <option value="@platform">@platform</option>
+                                                    }
                                             </select>
                                             <span asp-validation-for="Platforms" class="text-danger"></span>
                                         </div>
