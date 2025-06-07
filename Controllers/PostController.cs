@@ -31,7 +31,37 @@ public class PostController : Controller
         _userManager = userManager;
     }
 
-    [HttpGet("list")]
+    [HttpGet("/list")]
+    public IActionResult Get(int page = 1, int pageSize = 10)
+    {
+        string userId = _userManager.GetUserId(User);
+
+        if (page <= 0) page = 1;
+        if (pageSize <= 0) pageSize = 10;
+
+        var totalItems = _context.Posts.Count();
+        var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
+
+        var posts = _context.Posts
+            .OrderByDescending(p => p.CreatedAt)
+            .Where(p => p.UserId == userId)
+            .Skip((page - 1) * pageSize)
+            .Take(pageSize)
+            .ToList();
+
+        var response = new
+        {
+            currentPage = page,
+            pageSize = pageSize,
+            totalItems = totalItems,
+            totalPages = totalPages,
+            data = posts
+        };
+
+        return Ok(response);
+    }
+
+    [HttpGet("")]
     public IActionResult List()
     {
         return View();
@@ -86,9 +116,9 @@ public class PostController : Controller
         _context.Posts.Add(post);
         await _context.SaveChangesAsync();
 
-        return RedirectToAction("Update",  new {id = post.Id});
+        return RedirectToAction("Update", new { id = post.Id });
     }
-    
+
     [HttpGet("update/{id}")]
     public IActionResult Update(Guid id)
     {
@@ -100,4 +130,6 @@ public class PostController : Controller
 
         return View(model);
     }
+
+
 }
