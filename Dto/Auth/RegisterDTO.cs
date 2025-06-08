@@ -13,6 +13,6 @@ public class RegisterDTO
     public string Password { get; set; }
 
     [DataType(DataType.Password)]
-    [Compare("Password", ErrorMessage = "Hasła nie pasują do siebie.")]
+    [Compare("Password", ErrorMessage = "Passwords mismatch.")]
     public string ConfirmPassword { get; set; }
 }
