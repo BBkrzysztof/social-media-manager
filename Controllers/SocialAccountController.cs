@@ -1,26 +1,29 @@
 using System.Diagnostics;
-using Microsoft.AspNetCore.Mvc;
-using SocialMediaManager.Models;
-using SocialMediaManager.Dto.Auth;
+
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+
 using SocialMediaManager.Data;
-using Microsoft.AspNetCore.Authorization;
+using SocialMediaManager.Dto.Auth;
 using SocialMediaManager.Dto.Post;
+using SocialMediaManager.Dto.SocialAccount;
+using SocialMediaManager.Enum;
+using SocialMediaManager.Models;
 
 namespace SocialMediaManager.Controllers;
 
-[Route("post")]
+[Route("social-account")]
 [Authorize]
-public class PostController : Controller
+public class SocialAccountController : Controller
 {
     private readonly AppDbContext _context;
     private readonly IWebHostEnvironment _env;
     private readonly UserManager<User> _userManager;
 
-
-    public PostController(
+    public SocialAccountController(
         UserManager<User> userManager,
         AppDbContext context,
         IWebHostEnvironment env
@@ -44,7 +47,7 @@ public class PostController : Controller
         var totalItems = _context.Posts.Count();
         var totalPages = (int) Math.Ceiling(totalItems / (double) pageSize);
 
-        var posts = _context.Posts
+        var posts = _context.SocialAccounts
             .OrderByDescending(p => p.CreatedAt)
             .Where(p => p.UserId == userId)
             .Skip((page - 1) * pageSize)
@@ -77,61 +80,73 @@ public class PostController : Controller
 
     [HttpPost("create")]
     [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Create(CreatePostDTO dto)
+    public async Task<IActionResult> Create(CreateSocialAccountDTO dto)
     {
         if (!ModelState.IsValid)
             return View(dto);
 
-
-        var mediaUrls = "";
-
-        if (dto.MediaUrls is not null)
-        {
-            var file = dto.MediaUrls;
-
-            var fileName = Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + Path.GetExtension(file.FileName);
-            var path = Path.Combine(_env.WebRootPath, "uploads", fileName);
-
-            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-
-            using var stream = new FileStream(path, FileMode.Create);
-            await file.CopyToAsync(stream);
-
-            mediaUrls = "/uploads/" + fileName;
-
-        }
-
         string userId = _userManager.GetUserId(User);
         var user = await _context.Users.FirstOrDefaultAsync(u => u.Id == userId);
 
-        var post = new Post
+        var entity = new SocialAccount
         {
-            Title = dto.Title,
-            Content = dto.Content,
-            ScheduledAt = dto.ScheduledAt,
-            MediaUrls = mediaUrls,
+            UsernameOnPlatform = dto.UsernameOnPlatform,
+            AccessToken = dto.AccessToken,
+            RefreshToken = dto.RefreshToken,
             Platforms = dto.Platforms,
             UserId = userId,
-            User = user
+            User = user,
         };
 
-        _context.Posts.Add(post);
-        await _context.SaveChangesAsync();
+        _context.SocialAccounts.Add(entity);
+        _context.SaveChanges();
 
-        return RedirectToAction("Update", new { id = post.Id });
+        return RedirectToAction("Update", new { id = entity.Id });
     }
 
     [HttpGet("update/{id}")]
     public IActionResult Update(Guid id)
     {
-        var model = _context.Posts.FirstOrDefault(e => e.Id == id);
+        string userId = _userManager.GetUserId(User);
+        var model = _context.SocialAccounts.FirstOrDefault(e => e.Id == id && e.UserId == userId);
+
         if (model == null)
         {
             // return NotFound();
         }
 
-        return View(model);
+        return View(new UpdateSocialAccountDTO
+        {
+            Id = model.Id,
+            UsernameOnPlatform = model.UsernameOnPlatform,
+            AccessToken = model.AccessToken,
+            RefreshToken = model.RefreshToken,
+            Platforms = model.Platforms,
+        });
     }
 
+    [HttpPost("update")]
+    [ValidateAntiForgeryToken]
+    public async Task<IActionResult> UpdateAction(UpdateSocialAccountDTO dto)
+    {
+        string userId = _userManager.GetUserId(User);
+        var entity = _context.SocialAccounts.FirstOrDefault(a => a.Id == dto.Id && a.UserId == userId);
 
+        if (entity == null)
+            return NotFound();
+
+
+        if (!ModelState.IsValid)
+            return View(dto);
+
+        entity.UsernameOnPlatform = dto.UsernameOnPlatform;
+        entity.AccessToken = dto.AccessToken;
+        entity.RefreshToken = dto.RefreshToken;
+        entity.Platforms = dto.Platforms;
+        entity.UpdatedAt = DateTime.UtcNow;
+
+        _context.SaveChanges();
+
+        return RedirectToAction("Update", new { id = entity.Id });
+    }
 }

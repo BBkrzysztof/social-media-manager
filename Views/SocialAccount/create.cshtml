@@ -1,0 +1,40 @@
+@model SocialMediaManager.Dto.SocialAccount.CreateSocialAccountDTO
+@using SocialMediaManager.Enum
+
+@{
+    ViewData["Title"] = "Create Social Account";
+}
+
+<h2>Create Social Account</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label asp-for="UsernameOnPlatform" class="control-label"></label>
+        <input asp-for="UsernameOnPlatform" class="form-control" />
+        <span asp-validation-for="UsernameOnPlatform" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="AccessToken" class="control-label"></label>
+        <input asp-for="AccessToken" class="form-control" />
+        <span asp-validation-for="AccessToken" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RefreshToken" class="control-label"></label>
+        <input asp-for="RefreshToken" class="form-control" />
+        <span asp-validation-for="RefreshToken" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Platforms" class="control-label"></label>
+        <select asp-for="Platforms" asp-items="Html.GetEnumSelectList<Platform>()" class="form-control"></select>
+        <span asp-validation-for="Platforms" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
