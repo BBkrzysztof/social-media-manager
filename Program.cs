@@ -20,6 +20,9 @@ builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
+
+builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/auth/login");
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

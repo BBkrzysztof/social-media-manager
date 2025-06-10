@@ -1,0 +1,106 @@
+@model SocialMediaManager.Dto.Post.CreatePostDTO
+@using SocialMediaManager.Enum  
+
+@{
+    ViewData["Title"] = "Create post";
+    var platformOptions = Enum.GetValues(typeof(Platform)).Cast<Platform>();
+
+}
+
+    <section class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-md-8 col-xl-6 text-center mx-auto">
+                    <p class="fw-bold text-success mb-2">Create new post</p>
+                    <h2 class="fw-bold">Fill the form to schedule your post</h2>
+                </div>
+            </div>
+            <div class="">
+                <form method="post" enctype="multipart/form-data" asp-action="Create" class="row d-flex justify-content-center">
+                    <div class="col-md-6 col-xl-5">
+                            <div class="p-3 p-xl-4">
+                                <!-- Start: Success Example -->
+                                <div class="mb-3">
+                                    <input class="form-control" type="text" id="name-1" name="title" placeholder="Title" asp-for="Title">
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+ 
+                                <div class="mb-3">
+                                    <textarea class="form-control" id="message-1" name="Content" rows="6" asp-for="Content" placeholder="Content"></textarea>
+                                    <span asp-validation-for="Title" class="text-danger"></span>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary shadow d-block w-100" type="submit">Send </button>
+                                </div>
+                            </div>
+                    </div>
+                    <div class="col-md-6 col-xl-4 d-flex justify-content-center justify-content-lg-start justify-content-xl-start">
+                        <div class="d-flex flex-wrap flex-md-column justify-content-md-start align-items-lg-start h-100 ps-0">
+                            <div class="d-flex align-items-center justify-content-xxl-start align-items-xxl-center p-3">
+                                <div class="bs-icon-md bs-icon-circle bs-icon-white shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-calendar-event-fill text-primary">
+                                        <path d="M4 .5a.5.5 0 0 0-1 0V1H2a2 2 0 0 0-2 2v1h16V3a2 2 0 0 0-2-2h-1V.5a.5.5 0 0 0-1 0V1H4zM16 14V5H0v9a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2m-3.5-7h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5"></path>
+                                    </svg></div>
+                                <div class="px-2 ms-1">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="fw-bold mb-0">Scheduled at</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col ms-0">
+                                            <input asp-for="ScheduledAt" class="d-flex d-xxl-flex justify-content-xxl-center align-items-xxl-center" type="date">
+                                            <span asp-validation-for="ScheduledAt" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-xxl-start align-items-xxl-center p-3">
+                                <div class="bs-icon-md bs-icon-circle bs-icon-white shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-image-fill text-primary">
+                                        <path d="M.002 3a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-12a2 2 0 0 1-2-2V3zm1 9v1a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V9.5l-3.777-1.947a.5.5 0 0 0-.577.093l-3.71 3.71-2.66-1.772a.5.5 0 0 0-.63.062L1.002 12zm5-6.5a1.5 1.5 0 1 0-3 0 1.5 1.5 0 0 0 3 0"></path>
+                                    </svg></div>
+                                <div class="px-2 ms-1">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="fw-bold mb-0">Title image</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col ms-0">
+                                            <input asp-for="MediaUrls" type="file" class="pe-0 ps-0" style="font-size: 12px;">
+                                            <span asp-validation-for="MediaUrls" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                    <p class="text-muted mb-0"></p>
+                                </div>
+                            </div>
+                            <div class="d-flex align-items-center justify-content-xxl-start align-items-xxl-center p-3">
+                                <div class="bs-icon-md bs-icon-circle bs-icon-white shadow d-flex flex-shrink-0 justify-content-center align-items-center d-inline-block bs-icon bs-icon-md"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 16 16" class="bi bi-broadcast text-primary">
+                                        <path d="M3.05 3.05a7 7 0 0 0 0 9.9.5.5 0 0 1-.707.707 8 8 0 0 1 0-11.314.5.5 0 0 1 .707.707m2.122 2.122a4 4 0 0 0 0 5.656.5.5 0 1 1-.708.708 5 5 0 0 1 0-7.072.5.5 0 0 1 .708.708m5.656-.708a.5.5 0 0 1 .708 0 5 5 0 0 1 0 7.072.5.5 0 1 1-.708-.708 4 4 0 0 0 0-5.656.5.5 0 0 1 0-.708m2.122-2.12a.5.5 0 0 1 .707 0 8 8 0 0 1 0 11.313.5.5 0 0 1-.707-.707 7 7 0 0 0 0-9.9.5.5 0 0 1 0-.707zM10 8a2 2 0 1 1-4 0 2 2 0 0 1 4 0"></path>
+                                    </svg></div>
+                                <div class="px-2 ms-1">
+                                    <div class="row">
+                                        <div class="col">
+                                            <h6 class="fw-bold mb-0">Platforms</h6>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col ms-0">
+                                            <select class="form-select" asp-for="Platforms">
+                                                    @foreach (var platform in platformOptions)
+                                                    {
+                                                        <option value="@platform">@platform</option>
+                                                    }
+                                            </select>
+                                            <span asp-validation-for="Platforms" class="text-danger"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section><!-- End: Contact Details -->
+
+@section Scripts {@{await Html.RenderPartialAsync("_ValidationScriptsPartial");}}
