@@ -1,58 +1,116 @@
- <section class="py-5">
-        <!-- Start: Projects Grid -->
-        <div class="container py-5">
-            <div class="row mb-0">
-                <div class="col-md-8 col-xl-6 text-center mx-auto">
-                    <h2 class="fw-bold">Your posts</h2>
-                    <p class="text-muted">Curae hendrerit donec commodo hendrerit egestas tempus, turpis facilisis nostra nunc. Vestibulum dui eget ultrices.</p>
+<section class="py-5">
+    <div class="container py-5">
+        <div class="row mb-0">
+            <div class="col-md-8 col-xl-6 text-center mx-auto">
+                <h2 class="fw-bold">Your posts</h2>
+                <p class="text-muted">All Your posts - scheduled and already published.</p>
+            </div>
+        </div>
+
+        <!-- Filters -->
+        <div class="row mb-5 ps-4 pe-4">
+            <div class="col-md-8 col-lg-10 col-xl-10 d-flex align-items-center">
+                <div class="me-3">
+                    <label class="form-label mb-0" for="filters-platform">Platform:</label>
+                    <select id="filters-platform" class="form-select">
+                        <option value="">All</option>
+                        <option value="Facebook">Facebook</option>
+                        <option value="X">X</option>
+                        <option value="Instagram">Instagram</option>
+                    </select>
+                </div>
+                <div class="me-3">
+                    <label class="form-label mb-0" for="filters-date">Post date:</label>
+                    <input id="filters-date" class="form-control" type="date" />
                 </div>
             </div>
-            <div class="row mb-5 ps-4 pe-4" style="padding-left: 64px;padding-right: 64px;">
-                <div class="col-md-8 col-lg-10 col-xl-10 text-center d-sm-flex d-md-flex d-lg-flex justify-content-sm-center align-items-sm-center justify-content-md-center align-items-md-center justify-content-lg-start align-items-lg-center">
-                    <div class="text-start d-lg-flex justify-content-lg-center align-items-lg-center"><label class="form-label text-start d-lg-flex justify-content-lg-start align-items-lg-center me-1 mb-0" for="filters-platform">Filters:</label><select class="d-lg-flex justify-content-lg-start align-items-lg-center" style="text-align: left;" name="filters-platform">
-                            <optgroup label="This is a group">
-                                <option value="12" selected="">Facebook, X, Instagram</option>
-                                <option value="13">This is item 2</option>
-                                <option value="14">This is item 3</option>
-                            </optgroup>
-                        </select></div>
-                    <div class="text-start d-lg-flex justify-content-lg-center align-items-lg-center ms-3"><label class="form-label text-start d-lg-flex justify-content-lg-start align-items-lg-center me-1 mb-0 ms-0" for="post-date">Post date:</label><input type="date" name="post-date"></div>
-                </div>
-                <div class="col-md-4 col-lg-2 col-xl-2 offset-lg-1 text-center d-flex d-md-flex d-lg-flex justify-content-center align-items-center mx-auto justify-content-md-center align-items-md-center justify-content-lg-center align-items-lg-center justify-content-xl-center align-items-xl-center"><button class="btn btn-primary btn-sm" type="button">Create new</button></div>
+            <div class="col-md-4 col-lg-2 col-xl-2 text-end">
+                <a class="btn btn-primary btn-sm" href="/post/create">Create new</a>
             </div>
-            <div class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="assets/img/products/1.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2">Facebook</span><span class="badge bg-dark mb-2">X</span><span class="badge mb-2" style="background: var(--bs-secondary);">Instagram</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
+        </div>
+
+        <!-- List posts -->
+        <div id="post-list" class="row row-cols-1 row-cols-md-2 mx-auto" style="max-width: 900px;">
+            <!-- Dynamic fill with js -->
+        </div>
+
+        <!-- Pagination -->
+        <div class="text-center mt-4">
+            <button id="prev-page" class="btn btn-outline-secondary me-2" disabled>Previous</button>
+            <span id="page-info">Page 1</span>
+            <button id="next-page" class="btn btn-outline-secondary ms-2" disabled>Next</button>
+        </div>
+    </div>
+</section>
+
+<script>
+    let currentPage = 1;
+    const pageSize = 4;
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.getElementById('filters-platform').addEventListener('change', () => loadPosts(1));
+        document.getElementById('filters-date').addEventListener('change', () => loadPosts(1));
+        document.getElementById('prev-page').addEventListener('click', () => loadPosts(currentPage - 1));
+        document.getElementById('next-page').addEventListener('click', () => loadPosts(currentPage + 1));
+        loadPosts(currentPage);
+    });
+
+    function loadPosts(page) {
+        const platform = document.getElementById('filters-platform').value;
+        const date = document.getElementById('filters-date').value;
+
+        let url = `/list?page=${page}&pageSize=${pageSize}`;
+        // Add filtering later
+        // url += `&platform=${platform}&date=${date}`;
+
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                currentPage = data.currentPage;
+                const container = document.getElementById('post-list');
+                container.innerHTML = '';
+
+                if (!data.data || data.data.length === 0) {
+                    container.innerHTML = '<p class="text-center">You have no posts.</p>';
+                    return;
+                }
+
+                data.data.forEach(post => {
+                    const imageUrl = post.mediaUrls || '/assets/img/products/1.jpg';
+                    const title = post.title || 'No title';
+                    const content = post.content || '';
+                    const shortContent = content.length > 200 ? content.substring(0, 200) + '...' : content;
+                    const platforms = Array.isArray(post.platforms) ? post.platforms : [];
+
+                    const platformBadges = platforms.map(p =>
+                        `<span class="badge bg-primary mb-2 me-1">${p.trim()}</span>`
+                    ).join('');
+
+                    const card = `
+                        <div class="col mb-4">
+                            <div>
+                                <a href="/post/update/${post.id}">
+                                    <img class="rounded img-fluid shadow w-100 fit-cover" src="${imageUrl}" style="height: 250px;">
+                                </a>
+                                <div class="py-4">
+                                    ${platformBadges}
+                                    <h4 class="fw-bold">${title}</h4>
+                                    <p class="text-muted">${shortContent}</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="assets/img/products/2.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-warning mb-2"><strong>Scheduled</strong></span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="assets/img/products/3.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2"><strong>Facebook</strong></span><span class="badge bg-dark mb-2">X</span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col mb-4">
-                    <div><a href="#"><img class="rounded img-fluid shadow w-100 fit-cover" src="assets/img/products/1.jpg" style="height: 250px;"></a>
-                        <div class="py-4"><span class="badge bg-primary mb-2"><strong>Facebook</strong></span>
-                            <h4 class="fw-bold">Lorem libero donec</h4>
-                            <p class="text-muted">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div><!-- End: Projects Grid -->
-    </section><!-- Start: Footer Multi Column -->
+                    `;
+
+                    container.insertAdjacentHTML('beforeend', card);
+                });
+
+                document.getElementById('page-info').textContent = `Page ${data.currentPage} of ${data.totalPages}`;
+                document.getElementById('prev-page').disabled = data.currentPage <= 1;
+                document.getElementById('next-page').disabled = data.currentPage >= data.totalPages;
+            })
+            .catch(err => {
+                console.error(err);
+                document.getElementById('post-list').innerHTML = '<p class="text-danger">Error occurred.</p>';
+            });
+    }
+</script>
