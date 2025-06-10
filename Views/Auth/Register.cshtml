@@ -4,11 +4,12 @@
 
 
 @model SocialMediaManager.Dto.Auth.RegisterDTO
-    <section class="py-5">
+<section class="py-5">
         <div class="container py-5">
             <div class="row mb-4 mb-lg-5">
                 <div class="col-md-8 col-xl-6 text-center mx-auto">
                     <p class="fw-bold text-success mb-2">Register</p>
+                    <h2 class="fw-bold">Welcome to Social Manager</h2>
                 </div>
             </div>
             <div class="row d-flex justify-content-center">
@@ -43,7 +44,7 @@
                                     />
                                     <span asp-validation-for="Password" class="text-danger"></span>
                                 </div>
-                                <div class="mb-3"></div>
+                                <div class="mb-3">
                                     <input
                                         id="ConfirmPassword" 
                                         class="form-control"
@@ -55,11 +56,9 @@
                                     />
                                     <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
                                 </div>
-                                <div class="mb-3">
-                                    <button class="btn btn-primary shadow d-block w-100" type="submit">Register</button>
-                                </div>
-                                <p class="text-muted">Already have an accout?</p> 
-                                
+                                <div class="mb-3"><button class="btn btn-primary shadow d-block w-100" type="submit">Register</button></div>
+                                <p class="text-muted">Already have an accout?</p>
+                                  
                                 @if (!ViewData.ModelState.IsValid)
                                 {
                                     <ul class="text-danger">
@@ -79,9 +78,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-
+</section>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}

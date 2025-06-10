@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaManager.Data;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SocialMediaManager.Controllers;
 
@@ -79,9 +80,9 @@ public class AuthController : Controller
             return View(model);
         }
 
-        // Wylogowanie
-        [HttpPost("logout")]
-        [ValidateAntiForgeryToken]
+        // Wylogowanie powinien być post ale TBW 
+        [HttpGet("logout")]
+        [Authorize]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
