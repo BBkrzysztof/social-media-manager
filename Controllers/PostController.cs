@@ -47,6 +47,17 @@ public class PostController : Controller
             .Where(p => p.UserId == userId)
             .Skip((page - 1) * pageSize)
             .Take(pageSize)
+            .ToList()
+            .Select(p => new
+            {
+                p.Id,
+                p.Title,
+                p.Content,
+                p.ScheduledAt,
+                p.CreatedAt,
+                p.MediaUrls,
+                Platforms = p.Platforms.Select(pl => System.Enum.GetName(typeof(SocialMediaManager.Enum.Platform), pl)).ToList()
+            })
             .ToList();
 
         var response = new
