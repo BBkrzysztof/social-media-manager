@@ -294,11 +294,14 @@ namespace SocialMediaManager.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime(6)");
 
-                    b.Property<int>("Platform")
+                    b.Property<int>("PlatformId")
                         .HasColumnType("int");
 
                     b.Property<string>("RefreshToken")
                         .HasColumnType("longtext");
+
+                    b.Property<Guid>("SocialPlatformId")
+                        .HasColumnType("char(36)");
 
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime(6)");
@@ -313,9 +316,35 @@ namespace SocialMediaManager.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("SocialPlatformId");
+
                     b.HasIndex("UserId");
 
                     b.ToTable("SocialAccounts");
+                });
+
+            modelBuilder.Entity("SocialMediaManager.Models.SocialPlatform", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("char(36)");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.Property<string>("Logo")
+                        .HasColumnType("longtext");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("longtext");
+
+                    b.Property<DateTime>("UpdatedAt")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SocialPlatforms");
                 });
 
             modelBuilder.Entity("SocialMediaManager.Models.SocialPost", b =>
@@ -544,11 +573,19 @@ namespace SocialMediaManager.Migrations
 
             modelBuilder.Entity("SocialMediaManager.Models.SocialAccount", b =>
                 {
+                    b.HasOne("SocialMediaManager.Models.SocialPlatform", "SocialPlatform")
+                        .WithMany("SocialAccounts")
+                        .HasForeignKey("SocialPlatformId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("SocialMediaManager.Models.User", "User")
                         .WithMany("SocialAccounts")
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("SocialPlatform");
 
                     b.Navigation("User");
                 });
@@ -596,6 +633,11 @@ namespace SocialMediaManager.Migrations
             modelBuilder.Entity("SocialMediaManager.Models.SocialAccount", b =>
                 {
                     b.Navigation("SocialPosts");
+                });
+
+            modelBuilder.Entity("SocialMediaManager.Models.SocialPlatform", b =>
+                {
+                    b.Navigation("SocialAccounts");
                 });
 
             modelBuilder.Entity("SocialMediaManager.Models.SocialPost", b =>

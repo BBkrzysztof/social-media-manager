@@ -14,6 +14,7 @@ namespace SocialMediaManager.Data
 
         public DbSet<Post> Posts => Set<Post>();
         public DbSet<SocialAccount> SocialAccounts => Set<SocialAccount>();
+        public DbSet<SocialPlatform> SocialPlatforms => Set<SocialPlatform>();
         public DbSet<SocialPost> SocialPosts => Set<SocialPost>();
         public DbSet<Comment> Comments => Set<Comment>();
         public DbSet<ViewSnapshot> ViewSnapshots => Set<ViewSnapshot>();

@@ -11,9 +11,6 @@ using SocialMediaManager.Dto.Post;
 
 namespace SocialMediaManager.Controllers;
 
-/// <summary>
-/// Controller responsible for managing posts: listing, creating, updating and deleting.
-/// </summary>
 [Route("post")]
 [Authorize]
 public class PostController : Controller
@@ -23,9 +20,6 @@ public class PostController : Controller
     private readonly UserManager<User> _userManager;
 
 
-    /// <summary>
-    /// Constructor with dependencies injected.
-    /// </summary>
     public PostController(
         UserManager<User> userManager,
         AppDbContext context,
@@ -37,10 +31,6 @@ public class PostController : Controller
         _userManager = userManager;
     }
 
-
-    /// <summary>
-    /// Returns paginated list of posts belonging to the current user as JSON. Can then be accessed with JavaScript fetch() without page reloading.
-    /// </summary>
     [HttpGet("/list")]
     public IActionResult Get(int page = 1, int pageSize = 10)
     {
@@ -82,28 +72,18 @@ public class PostController : Controller
         return Ok(response);
     }
 
-    /// <summary>
-    /// Displays the list view of all posts.
-    /// </summary>
     [HttpGet("")]
     public IActionResult List()
     {
-        return View("List");
+        return View();
     }
 
-
-    /// <summary>
-    /// Displays the form to create a new post.
-    /// </summary>
     [HttpGet("create")]
     public IActionResult Create()
     {
         return View();
     }
 
-    /// <summary>
-    /// Handles form submission to create a new post.
-    /// </summary>
     [HttpPost("create")]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Create(CreatePostDTO dto)
@@ -150,88 +130,17 @@ public class PostController : Controller
         return RedirectToAction("Update", new { id = post.Id });
     }
 
-    /// <summary>
-    /// Displays the form to update an existing post.
-    /// </summary>
     [HttpGet("update/{id}")]
     public IActionResult Update(Guid id)
     {
         var model = _context.Posts.FirstOrDefault(e => e.Id == id);
         if (model == null)
-            return NotFound();
-
-        var dto = new CreatePostDTO
         {
-            Title = model.Title,
-            Content = model.Content,
-            ScheduledAt = model.ScheduledAt,
-            Platforms = model.Platforms
-            // MediaUrls skip - backend cannot fill form file field
-        };
+            // return NotFound();
+        }
 
-        ViewData["PostId"] = model.Id;
-        return View(dto);
+        return View(model);
     }
 
-    /// <summary>
-    /// Handles form submission to update an existing post.
-    /// </summary>
-    [HttpPost("update/{id}")]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Update(Guid id, CreatePostDTO dto)
-    {
-        var existingPost = await _context.Posts.FindAsync(id);
-        if (existingPost == null)
-        {
-            return NotFound();
-        }
 
-        if (!ModelState.IsValid)
-        {
-            return View(dto);
-        }
-
-        existingPost.Title = dto.Title;
-        existingPost.Content = dto.Content;
-        existingPost.ScheduledAt = dto.ScheduledAt;
-        existingPost.Platforms = dto.Platforms;
-
-        if (dto.MediaUrls is not null)
-        {
-            var file = dto.MediaUrls;
-
-            var fileName = Path.GetFileNameWithoutExtension(Path.GetRandomFileName()) + Path.GetExtension(file.FileName);
-            var path = Path.Combine(_env.WebRootPath, "uploads", fileName);
-
-            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
-
-            using var stream = new FileStream(path, FileMode.Create);
-            await file.CopyToAsync(stream);
-
-            existingPost.MediaUrls = "/uploads/" + fileName;
-        }
-
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("List");
-    }
-
-    /// <summary>
-    /// Deletes a post by its ID.
-    /// </summary>
-    [HttpPost("delete/{id}")]
-    [ValidateAntiForgeryToken]
-    public async Task<IActionResult> Delete(Guid id)
-    {
-        var post = await _context.Posts.FindAsync(id);
-        if (post == null)
-        {
-            return NotFound();
-        }
-
-        _context.Posts.Remove(post);
-        await _context.SaveChangesAsync();
-
-        return RedirectToAction("List");
-    }
 }

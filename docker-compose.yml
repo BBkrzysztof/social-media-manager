@@ -20,6 +20,3 @@ services:
       - mysql
     ports:
       - "5000:5000"
-    environment:
-      PAGES_APP_ID: ${PAGES_APP_ID}
-      PAGES_APP_SECRET: ${PAGES_APP_SECRET}
