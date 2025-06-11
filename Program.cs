@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using SocialMediaManager.Models;
 using SocialMediaManager.Data;
+using SocialMediaManager.Services;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
 
 
@@ -14,7 +15,7 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
-    
+
 // Add Identity with User model
 builder.Services.AddIdentity<User, IdentityRole>()
     .AddEntityFrameworkStores<AppDbContext>()
@@ -26,6 +27,9 @@ builder.Services.ConfigureApplicationCookie(options => options.LoginPath = "/aut
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+// Add Facebook API Service
+builder.Services.AddHttpClient<FacebookService>();
+builder.Services.AddScoped<FacebookService>();
 
 var app = builder.Build();
 

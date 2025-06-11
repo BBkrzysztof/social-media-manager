@@ -10,6 +10,9 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace SocialMediaManager.Controllers;
 
+/// <summary>
+/// Handles user authentication (register, login, logout).
+/// </summary>
 [Route("auth")]
 public class AuthController : Controller
 {
@@ -17,25 +20,33 @@ public class AuthController : Controller
         private readonly SignInManager<User> _signInManager;
         private readonly AppDbContext _context;
 
-        public AuthController(
-            UserManager<User> userManager, 
-            SignInManager<User> signInManager,
-            AppDbContext context
-        )
-        {
-            _userManager = userManager;
-            _signInManager = signInManager;
-            _context = context;
-        }
+    /// <summary>
+    /// Constructor with ...
+    /// </summary>
+    public AuthController(
+        UserManager<User> userManager, 
+        SignInManager<User> signInManager,
+        AppDbContext context
+    )
+    {
+        _userManager = userManager;
+        _signInManager = signInManager;
+        _context = context;
+    }
 
-    // Rejestracja
+
+    /// <summary>
+    /// Displays the registration form.
+    /// </summary>
     [HttpGet("register")]
     public IActionResult Register()
     {
         return View();
-            
-        }
+    }
 
+        /// <summary>
+        /// Handles user registration of an user.
+        /// </summary>
         [HttpPost("register")]
         public async Task<IActionResult> Register(RegisterDTO model)
         {
@@ -57,13 +68,18 @@ public class AuthController : Controller
             return View(model);
         }
 
-        // Logowanie
+        /// <summary>
+        /// Displays the login form.
+        /// </summary>
         [HttpGet("login")]
         public IActionResult Login()
         {
             return View();
         }
 
+        /// <summary>
+        /// Handles login request using credentials.
+        /// </summary>
         [HttpPost("login")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginDTO model)
@@ -80,7 +96,9 @@ public class AuthController : Controller
             return View(model);
         }
 
-        // Wylogowanie powinien być post ale TBW 
+        /// <summary>
+        /// Handles logout from app. (uses get)
+        /// </summary>
         [HttpGet("logout")]
         [Authorize]
         public async Task<IActionResult> Logout()
