@@ -486,4 +486,5 @@ $RECYCLE.BIN/
 bin/
 obj/
 
-wwwroot/uploads/*
+wwwroot/uploads/*. e n v  
+ 
