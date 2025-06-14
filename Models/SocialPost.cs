@@ -1,15 +1,18 @@
+using SocialMediaManager.Enum;
+
 namespace SocialMediaManager.Models;
 
-public class SocialPost: BaseModel
+public class SocialPost : BaseModel
 {
-    public required string Status {get; set;} //@todo refactor to enum 
+    public SocialPostStatus Status { get; set; } = SocialPostStatus.Awaitng;
+    public string? SocialPostId { get; set; } = string.Empty;
 
     //relations 
-    public Guid SocialAccountId {get; set;}
-    public required SocialAccount SocialAccount { get; set;}
+    public Guid SocialAccountId { get; set; }
+    public required SocialAccount SocialAccount { get; set; }
 
-    public Guid PostId {get; set;}
-    public required Post Post {get; set;}
+    public Guid PostId { get; set; }
+    public required Post Post { get; set; }
 
     public ICollection<Comment> Comments { get; set; } = new List<Comment>();
 

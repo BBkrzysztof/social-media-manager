@@ -16,7 +16,7 @@ public class TwitterService : ISocialMediaService
         _httpClient = httpClient;
     }
 
-    public async Task PostAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    public async Task<string> PostAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -31,6 +31,7 @@ public class TwitterService : ISocialMediaService
             var response = await _httpClient.SendAsync(request, cancellationToken);
             response.EnsureSuccessStatusCode();
             //TODO Implement API post
+            return "";
         }
         catch (Exception ex)
         {
