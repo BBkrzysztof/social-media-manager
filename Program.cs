@@ -4,7 +4,7 @@ using SocialMediaManager.Models;
 using SocialMediaManager.Data;
 using SocialMediaManager.Services;
 using Pomelo.EntityFrameworkCore.MySql.Infrastructure;
-
+using SocialMediaManager.BgService.Scheduler;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -30,6 +30,8 @@ builder.Services.AddControllersWithViews();
 // Add Facebook API Service
 builder.Services.AddHttpClient<FacebookService>();
 builder.Services.AddScoped<FacebookService>();
+
+builder.Services.AddHostedService<Scheduler>();
 
 var app = builder.Build();
 
