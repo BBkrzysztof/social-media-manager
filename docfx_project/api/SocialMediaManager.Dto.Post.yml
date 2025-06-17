@@ -1,0 +1,54 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Dto.Post
+  commentId: N:SocialMediaManager.Dto.Post
+  id: SocialMediaManager.Dto.Post
+  children:
+  - SocialMediaManager.Dto.Post.CreatePostDTO
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Dto.Post
+  nameWithType: SocialMediaManager.Dto.Post
+  fullName: SocialMediaManager.Dto.Post
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Dto.Post.CreatePostDTO
+  commentId: T:SocialMediaManager.Dto.Post.CreatePostDTO
+  parent: SocialMediaManager.Dto.Post
+  href: SocialMediaManager.Dto.Post.CreatePostDTO.html
+  name: CreatePostDTO
+  nameWithType: CreatePostDTO
+  fullName: SocialMediaManager.Dto.Post.CreatePostDTO
+- uid: SocialMediaManager.Dto.Post
+  commentId: N:SocialMediaManager.Dto.Post
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Dto.Post
+  nameWithType: SocialMediaManager.Dto.Post
+  fullName: SocialMediaManager.Dto.Post
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Dto
+    name: Dto
+    href: SocialMediaManager.Dto.html
+  - name: .
+  - uid: SocialMediaManager.Dto.Post
+    name: Post
+    href: SocialMediaManager.Dto.Post.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Dto
+    name: Dto
+    href: SocialMediaManager.Dto.html
+  - name: .
+  - uid: SocialMediaManager.Dto.Post
+    name: Post
+    href: SocialMediaManager.Dto.Post.html

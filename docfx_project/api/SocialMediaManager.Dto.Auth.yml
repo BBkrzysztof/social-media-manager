@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Dto.Auth
+  commentId: N:SocialMediaManager.Dto.Auth
+  id: SocialMediaManager.Dto.Auth
+  children:
+  - SocialMediaManager.Dto.Auth.LoginDTO
+  - SocialMediaManager.Dto.Auth.RegisterDTO
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Dto.Auth
+  nameWithType: SocialMediaManager.Dto.Auth
+  fullName: SocialMediaManager.Dto.Auth
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Dto.Auth.LoginDTO
+  commentId: T:SocialMediaManager.Dto.Auth.LoginDTO
+  parent: SocialMediaManager.Dto.Auth
+  href: SocialMediaManager.Dto.Auth.LoginDTO.html
+  name: LoginDTO
+  nameWithType: LoginDTO
+  fullName: SocialMediaManager.Dto.Auth.LoginDTO
+- uid: SocialMediaManager.Dto.Auth.RegisterDTO
+  commentId: T:SocialMediaManager.Dto.Auth.RegisterDTO
+  parent: SocialMediaManager.Dto.Auth
+  href: SocialMediaManager.Dto.Auth.RegisterDTO.html
+  name: RegisterDTO
+  nameWithType: RegisterDTO
+  fullName: SocialMediaManager.Dto.Auth.RegisterDTO
+- uid: SocialMediaManager.Dto.Auth
+  commentId: N:SocialMediaManager.Dto.Auth
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Dto.Auth
+  nameWithType: SocialMediaManager.Dto.Auth
+  fullName: SocialMediaManager.Dto.Auth
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Dto
+    name: Dto
+    href: SocialMediaManager.Dto.html
+  - name: .
+  - uid: SocialMediaManager.Dto.Auth
+    name: Auth
+    href: SocialMediaManager.Dto.Auth.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Dto
+    name: Dto
+    href: SocialMediaManager.Dto.html
+  - name: .
+  - uid: SocialMediaManager.Dto.Auth
+    name: Auth
+    href: SocialMediaManager.Dto.Auth.html

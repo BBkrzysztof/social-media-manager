@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Data
+  commentId: N:SocialMediaManager.Data
+  id: SocialMediaManager.Data
+  children:
+  - SocialMediaManager.Data.AppDbContext
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Data
+  nameWithType: SocialMediaManager.Data
+  fullName: SocialMediaManager.Data
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Data.AppDbContext
+  commentId: T:SocialMediaManager.Data.AppDbContext
+  parent: SocialMediaManager.Data
+  href: SocialMediaManager.Data.AppDbContext.html
+  name: AppDbContext
+  nameWithType: AppDbContext
+  fullName: SocialMediaManager.Data.AppDbContext
+- uid: SocialMediaManager.Data
+  commentId: N:SocialMediaManager.Data
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Data
+  nameWithType: SocialMediaManager.Data
+  fullName: SocialMediaManager.Data
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Data
+    name: Data
+    href: SocialMediaManager.Data.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Data
+    name: Data
+    href: SocialMediaManager.Data.html

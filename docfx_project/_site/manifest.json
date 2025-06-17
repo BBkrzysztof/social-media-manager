@@ -1,0 +1,584 @@
+{
+  "source_base_path": "/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.AuthController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.AuthController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.AuthController",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.AuthController.yml\" sourcestartlinenumber=\"1\">Handles user authentication (register, login, logout).</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookAccountList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookAccountList.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.FacebookController.FacebookAccountList",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.FacebookController.FacebookAccountList.yml\" sourcestartlinenumber=\"1\">Wrapper for list of pages.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookPage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookPage.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.FacebookController.FacebookPage",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.FacebookController.FacebookPage.yml\" sourcestartlinenumber=\"1\">Facebook page model with access token.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse.yml\" sourcestartlinenumber=\"1\">Response model for access token exchange.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.FacebookController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.FacebookController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.FacebookController",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.FacebookController.yml\" sourcestartlinenumber=\"1\">Handles Facebook OAuth login and callback for connecting Facebook page to this app.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.HomeController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.HomeController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.HomeController",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.HomeController.yml\" sourcestartlinenumber=\"1\">Controller for general site navigation and accessing other controllers views.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.PostController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.PostController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.PostController",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.PostController.yml\" sourcestartlinenumber=\"1\">Controller responsible for managing posts: listing, creating, updating and deleting.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.SocialLinkController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.SocialLinkController.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers.SocialLinkController",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Controllers.SocialLinkController.yml\" sourcestartlinenumber=\"1\">Controls linking and unlinking of social media accounts to the logged-in user.\nDisplays connected accounts and provides OAuth redirects.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Controllers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Controllers.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Controllers",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Data.AppDbContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Data.AppDbContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Data.AppDbContext",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Data.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Data",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Dto.Auth.LoginDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Dto.Auth.LoginDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Dto.Auth.LoginDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Dto.Auth.RegisterDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Dto.Auth.RegisterDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Dto.Auth.RegisterDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Dto.Auth.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Dto.Auth.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Dto.Auth",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Dto.Post.CreatePostDTO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Dto.Post.CreatePostDTO.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Dto.Post.CreatePostDTO",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Dto.Post.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Dto.Post.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Dto.Post",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Enum.Platform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Enum.Platform.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Enum.Platform",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Enum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Enum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Enum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Migrations.AddPostPlatformsFields.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Migrations.AddPostPlatformsFields.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Migrations.AddPostPlatformsFields",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Migrations.AddedTitleToPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Migrations.AddedTitleToPost.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Migrations.AddedTitleToPost",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Migrations.InitialCreate.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Migrations.InitialCreate.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Migrations.InitialCreate",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Migrations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Migrations.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Migrations",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.BaseModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.BaseModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.BaseModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.Comment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.Comment.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.Comment",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.EngagementMetrics.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.EngagementMetrics.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.EngagementMetrics",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.ErrorViewModel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.ErrorViewModel.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.ErrorViewModel",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.Post.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.Post.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.Post",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.Reaction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.Reaction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.Reaction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.SocialAccount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.SocialAccount.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.SocialAccount",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Models.SocialAccount.yml\" sourcestartlinenumber=\"1\">Represents a social media account linked to a user, including access token information\nand the platform it belongs to.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.SocialPost.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.SocialPost.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.SocialPost",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.User.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.User.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.User",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.ViewSnapshot.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.ViewSnapshot.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models.ViewSnapshot",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Models.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Models",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.Exceptions.SocialMediaException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.Exceptions.SocialMediaException.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services.Exceptions.SocialMediaException",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.Exceptions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services.Exceptions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.FacebookService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.FacebookService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services.FacebookService",
+      "Summary": "<p sourcefile=\"api/SocialMediaManager.Services.FacebookService.yml\" sourcestartlinenumber=\"1\">FacebookService provides methods to interact with the Facebook Graph API\nincluding posting to a user's page and retrieving engagement.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.ISocialMediaService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.ISocialMediaService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services.ISocialMediaService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.TwitterService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.TwitterService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services.TwitterService",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/SocialMediaManager.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/SocialMediaManager.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "SocialMediaManager.Services",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".json": {
+          "relative_path": "api/toc.json"
+        },
+        ".html": {
+          "relative_path": "api/toc.html"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

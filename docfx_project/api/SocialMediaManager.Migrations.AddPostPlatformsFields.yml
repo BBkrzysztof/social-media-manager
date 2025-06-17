@@ -1,0 +1,658 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields
+  commentId: T:SocialMediaManager.Migrations.AddPostPlatformsFields
+  id: AddPostPlatformsFields
+  parent: SocialMediaManager.Migrations
+  children:
+  - SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  - SocialMediaManager.Migrations.AddPostPlatformsFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  - SocialMediaManager.Migrations.AddPostPlatformsFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  langs:
+  - csharp
+  - vb
+  name: AddPostPlatformsFields
+  nameWithType: AddPostPlatformsFields
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields
+  type: Class
+  source:
+    remote:
+      path: Migrations/20250603075522_AddPostPlatformsFields.Designer.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: AddPostPlatformsFields
+    path: ../Migrations/20250603075522_AddPostPlatformsFields.Designer.cs
+    startLine: 12
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Migrations
+  example: []
+  syntax:
+    content: >-
+      [DbContext(typeof(AppDbContext))]
+
+      [Migration("20250603075522_AddPostPlatformsFields")]
+
+      public class AddPostPlatformsFields : Migration
+    content.vb: >-
+      <DbContext(GetType(AppDbContext))>
+
+      <Migration("20250603075522_AddPostPlatformsFields")>
+
+      Public Class AddPostPlatformsFields Inherits Migration
+  inheritance:
+  - System.Object
+  - Microsoft.EntityFrameworkCore.Migrations.Migration
+  inheritedMembers:
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  - Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  attributes:
+  - type: Microsoft.EntityFrameworkCore.Infrastructure.DbContextAttribute
+    ctor: Microsoft.EntityFrameworkCore.Infrastructure.DbContextAttribute.#ctor(System.Type)
+    arguments:
+    - type: System.Type
+      value: SocialMediaManager.Data.AppDbContext
+  - type: Microsoft.EntityFrameworkCore.Migrations.MigrationAttribute
+    ctor: Microsoft.EntityFrameworkCore.Migrations.MigrationAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: 20250603075522_AddPostPlatformsFields
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:SocialMediaManager.Migrations.AddPostPlatformsFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: SocialMediaManager.Migrations.AddPostPlatformsFields
+  langs:
+  - csharp
+  - vb
+  name: Up(MigrationBuilder)
+  nameWithType: AddPostPlatformsFields.Up(MigrationBuilder)
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    remote:
+      path: Migrations/20250603075522_AddPostPlatformsFields.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Up
+    path: ../Migrations/20250603075522_AddPostPlatformsFields.cs
+    startLine: 10
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Migrations
+  example: []
+  syntax:
+    content: protected override void Up(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Up(migrationBuilder As MigrationBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  overload: SocialMediaManager.Migrations.AddPostPlatformsFields.Up*
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:SocialMediaManager.Migrations.AddPostPlatformsFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  id: Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: SocialMediaManager.Migrations.AddPostPlatformsFields
+  langs:
+  - csharp
+  - vb
+  name: Down(MigrationBuilder)
+  nameWithType: AddPostPlatformsFields.Down(MigrationBuilder)
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  type: Method
+  source:
+    remote:
+      path: Migrations/20250603075522_AddPostPlatformsFields.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Down
+    path: ../Migrations/20250603075522_AddPostPlatformsFields.cs
+    startLine: 21
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Migrations
+  example: []
+  syntax:
+    content: protected override void Down(MigrationBuilder migrationBuilder)
+    parameters:
+    - id: migrationBuilder
+      type: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    content.vb: Protected Overrides Sub Down(migrationBuilder As MigrationBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  overload: SocialMediaManager.Migrations.AddPostPlatformsFields.Down*
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  id: BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: SocialMediaManager.Migrations.AddPostPlatformsFields
+  langs:
+  - csharp
+  - vb
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: AddPostPlatformsFields.BuildTargetModel(ModelBuilder)
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  type: Method
+  source:
+    remote:
+      path: Migrations/20250603075522_AddPostPlatformsFields.Designer.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: BuildTargetModel
+    path: ../Migrations/20250603075522_AddPostPlatformsFields.Designer.cs
+    startLine: 17
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Migrations
+  example: []
+  syntax:
+    content: protected override void BuildTargetModel(ModelBuilder modelBuilder)
+    parameters:
+    - id: modelBuilder
+      type: Microsoft.EntityFrameworkCore.ModelBuilder
+    content.vb: Protected Overrides Sub BuildTargetModel(modelBuilder As ModelBuilder)
+  overridden: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  overload: SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel*
+references:
+- uid: SocialMediaManager.Migrations
+  commentId: N:SocialMediaManager.Migrations
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Migrations
+  nameWithType: SocialMediaManager.Migrations
+  fullName: SocialMediaManager.Migrations
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Migrations
+    name: Migrations
+    href: SocialMediaManager.Migrations.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Migrations
+    name: Migrations
+    href: SocialMediaManager.Migrations.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration
+  commentId: T:Microsoft.EntityFrameworkCore.Migrations.Migration
+  parent: Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration
+  name: Migration
+  nameWithType: Migration
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  commentId: F:Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.initialdatabase
+  name: InitialDatabase
+  nameWithType: Migration.InitialDatabase
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.InitialDatabase
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.targetmodel
+  name: TargetModel
+  nameWithType: Migration.TargetModel
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.TargetModel
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.upoperations
+  name: UpOperations
+  nameWithType: Migration.UpOperations
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.UpOperations
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.downoperations
+  name: DownOperations
+  nameWithType: Migration.DownOperations
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.DownOperations
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  commentId: P:Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.activeprovider
+  name: ActiveProvider
+  nameWithType: Migration.ActiveProvider
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.ActiveProvider
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Microsoft.EntityFrameworkCore.Migrations
+  commentId: N:Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore.Migrations
+  nameWithType: Microsoft.EntityFrameworkCore.Migrations
+  fullName: Microsoft.EntityFrameworkCore.Migrations
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Migrations
+    name: Migrations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore.Migrations
+    name: Migrations
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  name: Up(MigrationBuilder)
+  nameWithType: Migration.Up(MigrationBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Up
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Up
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.up
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.Up*
+  commentId: Overload:SocialMediaManager.Migrations.AddPostPlatformsFields.Up
+  href: SocialMediaManager.Migrations.AddPostPlatformsFields.html#SocialMediaManager_Migrations_AddPostPlatformsFields_Up_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  name: Up
+  nameWithType: AddPostPlatformsFields.Up
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.Up
+- uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+  parent: Microsoft.EntityFrameworkCore.Migrations
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  name: MigrationBuilder
+  nameWithType: MigrationBuilder
+  fullName: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  name: Down(MigrationBuilder)
+  nameWithType: Migration.Down(MigrationBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Down
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)
+    name: Down
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.down
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder
+    name: MigrationBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migrationbuilder
+  - name: )
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.Down*
+  commentId: Overload:SocialMediaManager.Migrations.AddPostPlatformsFields.Down
+  href: SocialMediaManager.Migrations.AddPostPlatformsFields.html#SocialMediaManager_Migrations_AddPostPlatformsFields_Down_Microsoft_EntityFrameworkCore_Migrations_MigrationBuilder_
+  name: Down
+  nameWithType: AddPostPlatformsFields.Down
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.Down
+- uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  commentId: M:Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  parent: Microsoft.EntityFrameworkCore.Migrations.Migration
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  name: BuildTargetModel(ModelBuilder)
+  nameWithType: Migration.BuildTargetModel(ModelBuilder)
+  fullName: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+  spec.csharp:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: BuildTargetModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+  spec.vb:
+  - uid: Microsoft.EntityFrameworkCore.Migrations.Migration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)
+    name: BuildTargetModel
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.migrations.migration.buildtargetmodel
+  - name: (
+  - uid: Microsoft.EntityFrameworkCore.ModelBuilder
+    name: ModelBuilder
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  - name: )
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel*
+  commentId: Overload:SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel
+  href: SocialMediaManager.Migrations.AddPostPlatformsFields.html#SocialMediaManager_Migrations_AddPostPlatformsFields_BuildTargetModel_Microsoft_EntityFrameworkCore_ModelBuilder_
+  name: BuildTargetModel
+  nameWithType: AddPostPlatformsFields.BuildTargetModel
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel
+- uid: Microsoft.EntityFrameworkCore.ModelBuilder
+  commentId: T:Microsoft.EntityFrameworkCore.ModelBuilder
+  parent: Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore.modelbuilder
+  name: ModelBuilder
+  nameWithType: ModelBuilder
+  fullName: Microsoft.EntityFrameworkCore.ModelBuilder
+- uid: Microsoft.EntityFrameworkCore
+  commentId: N:Microsoft.EntityFrameworkCore
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/microsoft
+  name: Microsoft.EntityFrameworkCore
+  nameWithType: Microsoft.EntityFrameworkCore
+  fullName: Microsoft.EntityFrameworkCore
+  spec.csharp:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore
+  spec.vb:
+  - uid: Microsoft
+    name: Microsoft
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft
+  - name: .
+  - uid: Microsoft.EntityFrameworkCore
+    name: EntityFrameworkCore
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/microsoft.entityframeworkcore

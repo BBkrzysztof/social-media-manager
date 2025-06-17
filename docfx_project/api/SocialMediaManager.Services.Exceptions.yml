@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Services.Exceptions
+  commentId: N:SocialMediaManager.Services.Exceptions
+  id: SocialMediaManager.Services.Exceptions
+  children:
+  - SocialMediaManager.Services.Exceptions.SocialMediaException
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Services.Exceptions
+  nameWithType: SocialMediaManager.Services.Exceptions
+  fullName: SocialMediaManager.Services.Exceptions
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Services.Exceptions.SocialMediaException
+  commentId: T:SocialMediaManager.Services.Exceptions.SocialMediaException
+  href: SocialMediaManager.Services.Exceptions.SocialMediaException.html
+  name: SocialMediaException
+  nameWithType: SocialMediaException
+  fullName: SocialMediaManager.Services.Exceptions.SocialMediaException

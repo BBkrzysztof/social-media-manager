@@ -1,0 +1,60 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Services
+  commentId: N:SocialMediaManager.Services
+  id: SocialMediaManager.Services
+  children:
+  - SocialMediaManager.Services.FacebookService
+  - SocialMediaManager.Services.ISocialMediaService
+  - SocialMediaManager.Services.TwitterService
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Services
+  nameWithType: SocialMediaManager.Services
+  fullName: SocialMediaManager.Services
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Services.FacebookService
+  commentId: T:SocialMediaManager.Services.FacebookService
+  href: SocialMediaManager.Services.FacebookService.html
+  name: FacebookService
+  nameWithType: FacebookService
+  fullName: SocialMediaManager.Services.FacebookService
+- uid: SocialMediaManager.Services.ISocialMediaService
+  commentId: T:SocialMediaManager.Services.ISocialMediaService
+  parent: SocialMediaManager.Services
+  href: SocialMediaManager.Services.ISocialMediaService.html
+  name: ISocialMediaService
+  nameWithType: ISocialMediaService
+  fullName: SocialMediaManager.Services.ISocialMediaService
+- uid: SocialMediaManager.Services.TwitterService
+  commentId: T:SocialMediaManager.Services.TwitterService
+  href: SocialMediaManager.Services.TwitterService.html
+  name: TwitterService
+  nameWithType: TwitterService
+  fullName: SocialMediaManager.Services.TwitterService
+- uid: SocialMediaManager.Services
+  commentId: N:SocialMediaManager.Services
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Services
+  nameWithType: SocialMediaManager.Services
+  fullName: SocialMediaManager.Services
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Services
+    name: Services
+    href: SocialMediaManager.Services.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Services
+    name: Services
+    href: SocialMediaManager.Services.html

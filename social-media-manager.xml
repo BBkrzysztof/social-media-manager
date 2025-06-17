@@ -1,0 +1,288 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>social-media-manager</name>
+    </assembly>
+    <members>
+        <member name="T:SocialMediaManager.Controllers.AuthController">
+            <summary>
+            Handles user authentication (register, login, logout).
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.#ctor(Microsoft.AspNetCore.Identity.UserManager{SocialMediaManager.Models.User},Microsoft.AspNetCore.Identity.SignInManager{SocialMediaManager.Models.User},SocialMediaManager.Data.AppDbContext)">
+            <summary>
+            Constructor with ...
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.Register">
+            <summary>
+            Displays the registration form.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.Register(SocialMediaManager.Dto.Auth.RegisterDTO)">
+            <summary>
+            Handles user registration of an user.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.Login">
+            <summary>
+            Displays the login form.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.Login(SocialMediaManager.Dto.Auth.LoginDTO)">
+            <summary>
+            Handles login request using credentials.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.AuthController.Logout">
+            <summary>
+            Handles logout from app. (uses get)
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.FacebookController">
+            <summary>
+            Handles Facebook OAuth login and callback for connecting Facebook page to this app.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.FacebookController.Login">
+            <summary>
+            Starts Facebook OAuth flow.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.FacebookController.Callback(System.String)">
+            <summary>
+            Handles OAuth callback and stores Facebook Page access tokens.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse">
+            <summary>
+            Response model for access token exchange.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.FacebookController.FacebookAccountList">
+            <summary>
+            Wrapper for list of pages.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.FacebookController.FacebookPage">
+            <summary>
+            Facebook page model with access token.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.HomeController">
+            <summary>
+            Controller for general site navigation and accessing other controllers views.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{SocialMediaManager.Controllers.HomeController})">
+            <summary>
+            Injects the logger.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.HomeController.Index">
+            <summary>
+            Homepage view.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.HomeController.Privacy">
+            <summary>
+            Privacy policy view. For later...
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.HomeController.Error">
+            <summary>
+            Error view.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.PostController">
+            <summary>
+            Controller responsible for managing posts: listing, creating, updating and deleting.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.#ctor(Microsoft.AspNetCore.Identity.UserManager{SocialMediaManager.Models.User},SocialMediaManager.Data.AppDbContext,Microsoft.AspNetCore.Hosting.IWebHostEnvironment)">
+            <summary>
+            Constructor with dependencies injected.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Get(System.Int32,System.Int32)">
+            <summary>
+            Returns paginated list of posts belonging to the current user as JSON. Can then be accessed with JavaScript fetch() without page reloading.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.List">
+            <summary>
+            Displays the list view of all posts.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Create">
+            <summary>
+            Displays the form to create a new post.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Create(SocialMediaManager.Dto.Post.CreatePostDTO)">
+            <summary>
+            Handles form submission to create a new post.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Update(System.Guid)">
+            <summary>
+            Displays the form to update an existing post.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Update(System.Guid,SocialMediaManager.Dto.Post.CreatePostDTO)">
+            <summary>
+            Handles form submission to update an existing post.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.PostController.Delete(System.Guid)">
+            <summary>
+            Deletes a post by its ID.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Controllers.SocialLinkController">
+            <summary>
+            Controls linking and unlinking of social media accounts to the logged-in user.
+            Displays connected accounts and provides OAuth redirects.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.SocialLinkController.#ctor(SocialMediaManager.Data.AppDbContext,Microsoft.AspNetCore.Identity.UserManager{SocialMediaManager.Models.User})">
+            <summary>
+            Constructs the controller with database context and identity manager.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.SocialLinkController.Index">
+            <summary>
+            Displays a view with the user's currently linked social media accounts.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Controllers.SocialLinkController.Unlink(System.String)">
+            <summary>
+            Unlinks a given social media account based on platform name.
+            </summary>
+            <param name="platform">Platform name in lowercase (e.g., facebook, x)</param>
+        </member>
+        <member name="T:SocialMediaManager.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SocialMediaManager.Migrations.AddedTitleToPost">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddedTitleToPost.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddedTitleToPost.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddedTitleToPost.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SocialMediaManager.Migrations.AddPostPlatformsFields">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddPostPlatformsFields.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddPostPlatformsFields.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.AddPostPlatformsFields.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:SocialMediaManager.Models.SocialAccount">
+            <summary>
+            Represents a social media account linked to a user, including access token information
+            and the platform it belongs to.
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.Platform">
+            <summary>
+            The platform type (e.g., Facebook, X, Instagram, Threads, etc.).
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.UsernameOnPlatform">
+            <summary>
+            The username or page ID used on the social media platform.
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.AccessToken">
+            <summary>
+            The access token for API interactions.
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.RefreshToken">
+            <summary>
+            Optional refresh token if given by platform...
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.UserId">
+            <summary>
+            Foreign key to the owning user.
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.User">
+            <summary>
+            The owning user of this social account.
+            </summary>
+        </member>
+        <member name="P:SocialMediaManager.Models.SocialAccount.SocialPosts">
+            <summary>
+            The list of posts made with this account.
+            </summary>
+        </member>
+        <member name="T:SocialMediaManager.Services.FacebookService">
+            <summary>
+            FacebookService provides methods to interact with the Facebook Graph API
+            including posting to a user's page and retrieving engagement.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Services.FacebookService.#ctor(System.Net.Http.HttpClient,Microsoft.Extensions.Logging.ILogger{SocialMediaManager.Services.FacebookService})">
+            <summary>
+            Constructs FacebookService with HttpClient and logger.
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Services.FacebookService.PostAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)">
+            <summary>
+            Publishes a post to the Facebook Page associated with the given SocialAccount.
+            </summary>
+            <param name="account">Social account linked to a Facebook Page.</param>
+            <param name="post">Post content to be published.</param>
+            <param name="cancellationToken">Optional cancellation token.</param>
+        </member>
+        <member name="M:SocialMediaManager.Services.FacebookService.GetReactionsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)">
+            <summary>
+            Gets reactions for a Facebook post (Not implemented).
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Services.FacebookService.GetCommentsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)">
+            <summary>
+            Gets comments for a Facebook post (Not implemented).
+            </summary>
+        </member>
+        <member name="M:SocialMediaManager.Services.FacebookService.GetViewsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)">
+            <summary>
+            Gets number of views for a Facebook post (Not implemented).
+            </summary>
+        </member>
+    </members>
+</doc>

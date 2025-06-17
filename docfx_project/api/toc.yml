@@ -1,0 +1,132 @@
+### YamlMime:TableOfContent
+items:
+- uid: SocialMediaManager.Controllers
+  name: SocialMediaManager.Controllers
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Controllers.AuthController
+    name: AuthController
+    type: Class
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    type: Class
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+    name: FacebookController.FacebookAccountList
+    type: Class
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookPage
+    name: FacebookController.FacebookPage
+    type: Class
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+    name: FacebookController.FacebookTokenResponse
+    type: Class
+  - uid: SocialMediaManager.Controllers.HomeController
+    name: HomeController
+    type: Class
+  - uid: SocialMediaManager.Controllers.PostController
+    name: PostController
+    type: Class
+  - uid: SocialMediaManager.Controllers.SocialLinkController
+    name: SocialLinkController
+    type: Class
+- uid: SocialMediaManager.Data
+  name: SocialMediaManager.Data
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Data.AppDbContext
+    name: AppDbContext
+    type: Class
+- uid: SocialMediaManager.Dto.Auth
+  name: SocialMediaManager.Dto.Auth
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Dto.Auth.LoginDTO
+    name: LoginDTO
+    type: Class
+  - uid: SocialMediaManager.Dto.Auth.RegisterDTO
+    name: RegisterDTO
+    type: Class
+- uid: SocialMediaManager.Dto.Post
+  name: SocialMediaManager.Dto.Post
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Dto.Post.CreatePostDTO
+    name: CreatePostDTO
+    type: Class
+- uid: SocialMediaManager.Enum
+  name: SocialMediaManager.Enum
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Enum.Platform
+    name: Platform
+    type: Enum
+- uid: SocialMediaManager.Migrations
+  name: SocialMediaManager.Migrations
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Migrations.AddPostPlatformsFields
+    name: AddPostPlatformsFields
+    type: Class
+  - uid: SocialMediaManager.Migrations.AddedTitleToPost
+    name: AddedTitleToPost
+    type: Class
+  - uid: SocialMediaManager.Migrations.InitialCreate
+    name: InitialCreate
+    type: Class
+  - uid: SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum
+    name: Refactor_SocialAccount_UseEnum
+    type: Class
+- uid: SocialMediaManager.Models
+  name: SocialMediaManager.Models
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Models.BaseModel
+    name: BaseModel
+    type: Class
+  - uid: SocialMediaManager.Models.Comment
+    name: Comment
+    type: Class
+  - uid: SocialMediaManager.Models.EngagementMetrics
+    name: EngagementMetrics
+    type: Class
+  - uid: SocialMediaManager.Models.ErrorViewModel
+    name: ErrorViewModel
+    type: Class
+  - uid: SocialMediaManager.Models.Post
+    name: Post
+    type: Class
+  - uid: SocialMediaManager.Models.Reaction
+    name: Reaction
+    type: Class
+  - uid: SocialMediaManager.Models.SocialAccount
+    name: SocialAccount
+    type: Class
+  - uid: SocialMediaManager.Models.SocialPost
+    name: SocialPost
+    type: Class
+  - uid: SocialMediaManager.Models.User
+    name: User
+    type: Class
+  - uid: SocialMediaManager.Models.ViewSnapshot
+    name: ViewSnapshot
+    type: Class
+- uid: SocialMediaManager.Services
+  name: SocialMediaManager.Services
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Services.FacebookService
+    name: FacebookService
+    type: Class
+  - uid: SocialMediaManager.Services.ISocialMediaService
+    name: ISocialMediaService
+    type: Interface
+  - uid: SocialMediaManager.Services.TwitterService
+    name: TwitterService
+    type: Class
+- uid: SocialMediaManager.Services.Exceptions
+  name: SocialMediaManager.Services.Exceptions
+  type: Namespace
+  items:
+  - uid: SocialMediaManager.Services.Exceptions.SocialMediaException
+    name: SocialMediaException
+    type: Class
+memberLayout: SamePage

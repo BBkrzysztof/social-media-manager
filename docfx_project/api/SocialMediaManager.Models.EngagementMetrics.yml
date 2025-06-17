@@ -1,0 +1,706 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Models.EngagementMetrics
+  commentId: T:SocialMediaManager.Models.EngagementMetrics
+  id: EngagementMetrics
+  parent: SocialMediaManager.Models
+  children:
+  - SocialMediaManager.Models.EngagementMetrics.Comments
+  - SocialMediaManager.Models.EngagementMetrics.LastChecked
+  - SocialMediaManager.Models.EngagementMetrics.Likes
+  - SocialMediaManager.Models.EngagementMetrics.Reactions
+  - SocialMediaManager.Models.EngagementMetrics.Shares
+  - SocialMediaManager.Models.EngagementMetrics.SocialPost
+  - SocialMediaManager.Models.EngagementMetrics.SocialPostId
+  langs:
+  - csharp
+  - vb
+  name: EngagementMetrics
+  nameWithType: EngagementMetrics
+  fullName: SocialMediaManager.Models.EngagementMetrics
+  type: Class
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: EngagementMetrics
+    path: ../Models/EngagementMetrics.cs
+    startLine: 2
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: 'public class EngagementMetrics : BaseModel'
+    content.vb: Public Class EngagementMetrics Inherits BaseModel
+  inheritance:
+  - System.Object
+  - SocialMediaManager.Models.BaseModel
+  inheritedMembers:
+  - SocialMediaManager.Models.BaseModel.Id
+  - SocialMediaManager.Models.BaseModel.CreatedAt
+  - SocialMediaManager.Models.BaseModel.UpdatedAt
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: SocialMediaManager.Models.EngagementMetrics.Likes
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.Likes
+  id: Likes
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: Likes
+  nameWithType: EngagementMetrics.Likes
+  fullName: SocialMediaManager.Models.EngagementMetrics.Likes
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Likes
+    path: ../Models/EngagementMetrics.cs
+    startLine: 4
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public int Likes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Likes As Integer
+  overload: SocialMediaManager.Models.EngagementMetrics.Likes*
+- uid: SocialMediaManager.Models.EngagementMetrics.Shares
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.Shares
+  id: Shares
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: Shares
+  nameWithType: EngagementMetrics.Shares
+  fullName: SocialMediaManager.Models.EngagementMetrics.Shares
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Shares
+    path: ../Models/EngagementMetrics.cs
+    startLine: 6
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public int Shares { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Shares As Integer
+  overload: SocialMediaManager.Models.EngagementMetrics.Shares*
+- uid: SocialMediaManager.Models.EngagementMetrics.Comments
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.Comments
+  id: Comments
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: Comments
+  nameWithType: EngagementMetrics.Comments
+  fullName: SocialMediaManager.Models.EngagementMetrics.Comments
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Comments
+    path: ../Models/EngagementMetrics.cs
+    startLine: 8
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public int Comments { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Comments As Integer
+  overload: SocialMediaManager.Models.EngagementMetrics.Comments*
+- uid: SocialMediaManager.Models.EngagementMetrics.LastChecked
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.LastChecked
+  id: LastChecked
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: LastChecked
+  nameWithType: EngagementMetrics.LastChecked
+  fullName: SocialMediaManager.Models.EngagementMetrics.LastChecked
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: LastChecked
+    path: ../Models/EngagementMetrics.cs
+    startLine: 10
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public int LastChecked { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property LastChecked As Integer
+  overload: SocialMediaManager.Models.EngagementMetrics.LastChecked*
+- uid: SocialMediaManager.Models.EngagementMetrics.SocialPostId
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.SocialPostId
+  id: SocialPostId
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: SocialPostId
+  nameWithType: EngagementMetrics.SocialPostId
+  fullName: SocialMediaManager.Models.EngagementMetrics.SocialPostId
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: SocialPostId
+    path: ../Models/EngagementMetrics.cs
+    startLine: 14
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public Guid SocialPostId { get; set; }
+    parameters: []
+    return:
+      type: System.Guid
+    content.vb: Public Property SocialPostId As Guid
+  overload: SocialMediaManager.Models.EngagementMetrics.SocialPostId*
+- uid: SocialMediaManager.Models.EngagementMetrics.SocialPost
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.SocialPost
+  id: SocialPost
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: SocialPost
+  nameWithType: EngagementMetrics.SocialPost
+  fullName: SocialMediaManager.Models.EngagementMetrics.SocialPost
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: SocialPost
+    path: ../Models/EngagementMetrics.cs
+    startLine: 15
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public required SocialPost SocialPost { get; set; }
+    parameters: []
+    return:
+      type: SocialMediaManager.Models.SocialPost
+    content.vb: Public Property SocialPost As SocialPost
+  overload: SocialMediaManager.Models.EngagementMetrics.SocialPost*
+- uid: SocialMediaManager.Models.EngagementMetrics.Reactions
+  commentId: P:SocialMediaManager.Models.EngagementMetrics.Reactions
+  id: Reactions
+  parent: SocialMediaManager.Models.EngagementMetrics
+  langs:
+  - csharp
+  - vb
+  name: Reactions
+  nameWithType: EngagementMetrics.Reactions
+  fullName: SocialMediaManager.Models.EngagementMetrics.Reactions
+  type: Property
+  source:
+    remote:
+      path: Models/EngagementMetrics.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Reactions
+    path: ../Models/EngagementMetrics.cs
+    startLine: 17
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Models
+  syntax:
+    content: public ICollection<Reaction> Reactions { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.ICollection{SocialMediaManager.Models.Reaction}
+    content.vb: Public Property Reactions As ICollection(Of Reaction)
+  overload: SocialMediaManager.Models.EngagementMetrics.Reactions*
+references:
+- uid: SocialMediaManager.Models
+  commentId: N:SocialMediaManager.Models
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Models
+  nameWithType: SocialMediaManager.Models
+  fullName: SocialMediaManager.Models
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: SocialMediaManager.Models.BaseModel
+  commentId: T:SocialMediaManager.Models.BaseModel
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.BaseModel.html
+  name: BaseModel
+  nameWithType: BaseModel
+  fullName: SocialMediaManager.Models.BaseModel
+- uid: SocialMediaManager.Models.BaseModel.Id
+  commentId: P:SocialMediaManager.Models.BaseModel.Id
+  parent: SocialMediaManager.Models.BaseModel
+  href: SocialMediaManager.Models.BaseModel.html#SocialMediaManager_Models_BaseModel_Id
+  name: Id
+  nameWithType: BaseModel.Id
+  fullName: SocialMediaManager.Models.BaseModel.Id
+- uid: SocialMediaManager.Models.BaseModel.CreatedAt
+  commentId: P:SocialMediaManager.Models.BaseModel.CreatedAt
+  parent: SocialMediaManager.Models.BaseModel
+  href: SocialMediaManager.Models.BaseModel.html#SocialMediaManager_Models_BaseModel_CreatedAt
+  name: CreatedAt
+  nameWithType: BaseModel.CreatedAt
+  fullName: SocialMediaManager.Models.BaseModel.CreatedAt
+- uid: SocialMediaManager.Models.BaseModel.UpdatedAt
+  commentId: P:SocialMediaManager.Models.BaseModel.UpdatedAt
+  parent: SocialMediaManager.Models.BaseModel
+  href: SocialMediaManager.Models.BaseModel.html#SocialMediaManager_Models_BaseModel_UpdatedAt
+  name: UpdatedAt
+  nameWithType: BaseModel.UpdatedAt
+  fullName: SocialMediaManager.Models.BaseModel.UpdatedAt
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: SocialMediaManager.Models.EngagementMetrics.Likes*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.Likes
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_Likes
+  name: Likes
+  nameWithType: EngagementMetrics.Likes
+  fullName: SocialMediaManager.Models.EngagementMetrics.Likes
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: SocialMediaManager.Models.EngagementMetrics.Shares*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.Shares
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_Shares
+  name: Shares
+  nameWithType: EngagementMetrics.Shares
+  fullName: SocialMediaManager.Models.EngagementMetrics.Shares
+- uid: SocialMediaManager.Models.EngagementMetrics.Comments*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.Comments
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_Comments
+  name: Comments
+  nameWithType: EngagementMetrics.Comments
+  fullName: SocialMediaManager.Models.EngagementMetrics.Comments
+- uid: SocialMediaManager.Models.EngagementMetrics.LastChecked*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.LastChecked
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_LastChecked
+  name: LastChecked
+  nameWithType: EngagementMetrics.LastChecked
+  fullName: SocialMediaManager.Models.EngagementMetrics.LastChecked
+- uid: SocialMediaManager.Models.EngagementMetrics.SocialPostId*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.SocialPostId
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_SocialPostId
+  name: SocialPostId
+  nameWithType: EngagementMetrics.SocialPostId
+  fullName: SocialMediaManager.Models.EngagementMetrics.SocialPostId
+- uid: System.Guid
+  commentId: T:System.Guid
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.guid
+  name: Guid
+  nameWithType: Guid
+  fullName: System.Guid
+- uid: SocialMediaManager.Models.EngagementMetrics.SocialPost*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.SocialPost
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_SocialPost
+  name: SocialPost
+  nameWithType: EngagementMetrics.SocialPost
+  fullName: SocialMediaManager.Models.EngagementMetrics.SocialPost
+- uid: SocialMediaManager.Models.SocialPost
+  commentId: T:SocialMediaManager.Models.SocialPost
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.SocialPost.html
+  name: SocialPost
+  nameWithType: SocialPost
+  fullName: SocialMediaManager.Models.SocialPost
+- uid: SocialMediaManager.Models.EngagementMetrics.Reactions*
+  commentId: Overload:SocialMediaManager.Models.EngagementMetrics.Reactions
+  href: SocialMediaManager.Models.EngagementMetrics.html#SocialMediaManager_Models_EngagementMetrics_Reactions
+  name: Reactions
+  nameWithType: EngagementMetrics.Reactions
+  fullName: SocialMediaManager.Models.EngagementMetrics.Reactions
+- uid: System.Collections.Generic.ICollection{SocialMediaManager.Models.Reaction}
+  commentId: T:System.Collections.Generic.ICollection{SocialMediaManager.Models.Reaction}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.ICollection`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<Reaction>
+  nameWithType: ICollection<Reaction>
+  fullName: System.Collections.Generic.ICollection<SocialMediaManager.Models.Reaction>
+  nameWithType.vb: ICollection(Of Reaction)
+  fullName.vb: System.Collections.Generic.ICollection(Of SocialMediaManager.Models.Reaction)
+  name.vb: ICollection(Of Reaction)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - uid: SocialMediaManager.Models.Reaction
+    name: Reaction
+    href: SocialMediaManager.Models.Reaction.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SocialMediaManager.Models.Reaction
+    name: Reaction
+    href: SocialMediaManager.Models.Reaction.html
+  - name: )
+- uid: System.Collections.Generic.ICollection`1
+  commentId: T:System.Collections.Generic.ICollection`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  name: ICollection<T>
+  nameWithType: ICollection<T>
+  fullName: System.Collections.Generic.ICollection<T>
+  nameWithType.vb: ICollection(Of T)
+  fullName.vb: System.Collections.Generic.ICollection(Of T)
+  name.vb: ICollection(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.ICollection`1
+    name: ICollection
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.icollection-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic

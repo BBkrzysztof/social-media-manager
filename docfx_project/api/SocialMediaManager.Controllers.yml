@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Controllers
+  commentId: N:SocialMediaManager.Controllers
+  id: SocialMediaManager.Controllers
+  children:
+  - SocialMediaManager.Controllers.AuthController
+  - SocialMediaManager.Controllers.FacebookController
+  - SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+  - SocialMediaManager.Controllers.FacebookController.FacebookPage
+  - SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+  - SocialMediaManager.Controllers.HomeController
+  - SocialMediaManager.Controllers.PostController
+  - SocialMediaManager.Controllers.SocialLinkController
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Controllers
+  nameWithType: SocialMediaManager.Controllers
+  fullName: SocialMediaManager.Controllers
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Controllers.AuthController
+  commentId: T:SocialMediaManager.Controllers.AuthController
+  href: SocialMediaManager.Controllers.AuthController.html
+  name: AuthController
+  nameWithType: AuthController
+  fullName: SocialMediaManager.Controllers.AuthController
+- uid: SocialMediaManager.Controllers.FacebookController
+  commentId: T:SocialMediaManager.Controllers.FacebookController
+  href: SocialMediaManager.Controllers.FacebookController.html
+  name: FacebookController
+  nameWithType: FacebookController
+  fullName: SocialMediaManager.Controllers.FacebookController
+- uid: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+  commentId: T:SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+  href: SocialMediaManager.Controllers.FacebookController.html
+  name: FacebookController.FacebookTokenResponse
+  nameWithType: FacebookController.FacebookTokenResponse
+  fullName: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+  spec.csharp:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+    name: FacebookTokenResponse
+    href: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse.html
+  spec.vb:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse
+    name: FacebookTokenResponse
+    href: SocialMediaManager.Controllers.FacebookController.FacebookTokenResponse.html
+- uid: SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+  commentId: T:SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+  href: SocialMediaManager.Controllers.FacebookController.html
+  name: FacebookController.FacebookAccountList
+  nameWithType: FacebookController.FacebookAccountList
+  fullName: SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+  spec.csharp:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+    name: FacebookAccountList
+    href: SocialMediaManager.Controllers.FacebookController.FacebookAccountList.html
+  spec.vb:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookAccountList
+    name: FacebookAccountList
+    href: SocialMediaManager.Controllers.FacebookController.FacebookAccountList.html
+- uid: SocialMediaManager.Controllers.FacebookController.FacebookPage
+  commentId: T:SocialMediaManager.Controllers.FacebookController.FacebookPage
+  href: SocialMediaManager.Controllers.FacebookController.html
+  name: FacebookController.FacebookPage
+  nameWithType: FacebookController.FacebookPage
+  fullName: SocialMediaManager.Controllers.FacebookController.FacebookPage
+  spec.csharp:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookPage
+    name: FacebookPage
+    href: SocialMediaManager.Controllers.FacebookController.FacebookPage.html
+  spec.vb:
+  - uid: SocialMediaManager.Controllers.FacebookController
+    name: FacebookController
+    href: SocialMediaManager.Controllers.FacebookController.html
+  - name: .
+  - uid: SocialMediaManager.Controllers.FacebookController.FacebookPage
+    name: FacebookPage
+    href: SocialMediaManager.Controllers.FacebookController.FacebookPage.html
+- uid: SocialMediaManager.Controllers.HomeController
+  commentId: T:SocialMediaManager.Controllers.HomeController
+  href: SocialMediaManager.Controllers.HomeController.html
+  name: HomeController
+  nameWithType: HomeController
+  fullName: SocialMediaManager.Controllers.HomeController
+- uid: SocialMediaManager.Controllers.PostController
+  commentId: T:SocialMediaManager.Controllers.PostController
+  href: SocialMediaManager.Controllers.PostController.html
+  name: PostController
+  nameWithType: PostController
+  fullName: SocialMediaManager.Controllers.PostController
+- uid: SocialMediaManager.Controllers.SocialLinkController
+  commentId: T:SocialMediaManager.Controllers.SocialLinkController
+  href: SocialMediaManager.Controllers.SocialLinkController.html
+  name: SocialLinkController
+  nameWithType: SocialLinkController
+  fullName: SocialMediaManager.Controllers.SocialLinkController

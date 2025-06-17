@@ -1,0 +1,492 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Services.ISocialMediaService
+  commentId: T:SocialMediaManager.Services.ISocialMediaService
+  id: ISocialMediaService
+  parent: SocialMediaManager.Services
+  children:
+  - SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  - SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  - SocialMediaManager.Services.ISocialMediaService.GetViewsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  - SocialMediaManager.Services.ISocialMediaService.PostAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: ISocialMediaService
+  nameWithType: ISocialMediaService
+  fullName: SocialMediaManager.Services.ISocialMediaService
+  type: Interface
+  source:
+    remote:
+      path: Services/ISocialMediaService.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: ISocialMediaService
+    path: ../Services/ISocialMediaService.cs
+    startLine: 3
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Services
+  syntax:
+    content: public interface ISocialMediaService
+    content.vb: Public Interface ISocialMediaService
+- uid: SocialMediaManager.Services.ISocialMediaService.PostAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  commentId: M:SocialMediaManager.Services.ISocialMediaService.PostAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  id: PostAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  parent: SocialMediaManager.Services.ISocialMediaService
+  langs:
+  - csharp
+  - vb
+  name: PostAsync(SocialAccount, SocialPost, CancellationToken)
+  nameWithType: ISocialMediaService.PostAsync(SocialAccount, SocialPost, CancellationToken)
+  fullName: SocialMediaManager.Services.ISocialMediaService.PostAsync(SocialMediaManager.Models.SocialAccount, SocialMediaManager.Models.SocialPost, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/ISocialMediaService.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: PostAsync
+    path: ../Services/ISocialMediaService.cs
+    startLine: 5
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Services
+  syntax:
+    content: Task PostAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    parameters:
+    - id: account
+      type: SocialMediaManager.Models.SocialAccount
+    - id: post
+      type: SocialMediaManager.Models.SocialPost
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task
+    content.vb: Function PostAsync(account As SocialAccount, post As SocialPost, cancellationToken As CancellationToken = Nothing) As Task
+  overload: SocialMediaManager.Services.ISocialMediaService.PostAsync*
+- uid: SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  commentId: M:SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  id: GetReactionsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  parent: SocialMediaManager.Services.ISocialMediaService
+  langs:
+  - csharp
+  - vb
+  name: GetReactionsAsync(SocialAccount, SocialPost, CancellationToken)
+  nameWithType: ISocialMediaService.GetReactionsAsync(SocialAccount, SocialPost, CancellationToken)
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync(SocialMediaManager.Models.SocialAccount, SocialMediaManager.Models.SocialPost, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/ISocialMediaService.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: GetReactionsAsync
+    path: ../Services/ISocialMediaService.cs
+    startLine: 6
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Services
+  syntax:
+    content: Task<IList<Reaction>> GetReactionsAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    parameters:
+    - id: account
+      type: SocialMediaManager.Models.SocialAccount
+    - id: post
+      type: SocialMediaManager.Models.SocialPost
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Reaction}}
+    content.vb: Function GetReactionsAsync(account As SocialAccount, post As SocialPost, cancellationToken As CancellationToken = Nothing) As Task(Of IList(Of Reaction))
+  overload: SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync*
+- uid: SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  commentId: M:SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  id: GetCommentsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  parent: SocialMediaManager.Services.ISocialMediaService
+  langs:
+  - csharp
+  - vb
+  name: GetCommentsAsync(SocialAccount, SocialPost, CancellationToken)
+  nameWithType: ISocialMediaService.GetCommentsAsync(SocialAccount, SocialPost, CancellationToken)
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync(SocialMediaManager.Models.SocialAccount, SocialMediaManager.Models.SocialPost, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/ISocialMediaService.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: GetCommentsAsync
+    path: ../Services/ISocialMediaService.cs
+    startLine: 7
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Services
+  syntax:
+    content: Task<IList<Comment>> GetCommentsAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    parameters:
+    - id: account
+      type: SocialMediaManager.Models.SocialAccount
+    - id: post
+      type: SocialMediaManager.Models.SocialPost
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Comment}}
+    content.vb: Function GetCommentsAsync(account As SocialAccount, post As SocialPost, cancellationToken As CancellationToken = Nothing) As Task(Of IList(Of Comment))
+  overload: SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync*
+- uid: SocialMediaManager.Services.ISocialMediaService.GetViewsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  commentId: M:SocialMediaManager.Services.ISocialMediaService.GetViewsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  id: GetViewsAsync(SocialMediaManager.Models.SocialAccount,SocialMediaManager.Models.SocialPost,System.Threading.CancellationToken)
+  parent: SocialMediaManager.Services.ISocialMediaService
+  langs:
+  - csharp
+  - vb
+  name: GetViewsAsync(SocialAccount, SocialPost, CancellationToken)
+  nameWithType: ISocialMediaService.GetViewsAsync(SocialAccount, SocialPost, CancellationToken)
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetViewsAsync(SocialMediaManager.Models.SocialAccount, SocialMediaManager.Models.SocialPost, System.Threading.CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: Services/ISocialMediaService.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: GetViewsAsync
+    path: ../Services/ISocialMediaService.cs
+    startLine: 8
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Services
+  syntax:
+    content: Task<int> GetViewsAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    parameters:
+    - id: account
+      type: SocialMediaManager.Models.SocialAccount
+    - id: post
+      type: SocialMediaManager.Models.SocialPost
+    - id: cancellationToken
+      type: System.Threading.CancellationToken
+    return:
+      type: System.Threading.Tasks.Task{System.Int32}
+    content.vb: Function GetViewsAsync(account As SocialAccount, post As SocialPost, cancellationToken As CancellationToken = Nothing) As Task(Of Integer)
+  overload: SocialMediaManager.Services.ISocialMediaService.GetViewsAsync*
+references:
+- uid: SocialMediaManager.Services
+  commentId: N:SocialMediaManager.Services
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Services
+  nameWithType: SocialMediaManager.Services
+  fullName: SocialMediaManager.Services
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Services
+    name: Services
+    href: SocialMediaManager.Services.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Services
+    name: Services
+    href: SocialMediaManager.Services.html
+- uid: SocialMediaManager.Services.ISocialMediaService.PostAsync*
+  commentId: Overload:SocialMediaManager.Services.ISocialMediaService.PostAsync
+  href: SocialMediaManager.Services.ISocialMediaService.html#SocialMediaManager_Services_ISocialMediaService_PostAsync_SocialMediaManager_Models_SocialAccount_SocialMediaManager_Models_SocialPost_System_Threading_CancellationToken_
+  name: PostAsync
+  nameWithType: ISocialMediaService.PostAsync
+  fullName: SocialMediaManager.Services.ISocialMediaService.PostAsync
+- uid: SocialMediaManager.Models.SocialAccount
+  commentId: T:SocialMediaManager.Models.SocialAccount
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.SocialAccount.html
+  name: SocialAccount
+  nameWithType: SocialAccount
+  fullName: SocialMediaManager.Models.SocialAccount
+- uid: SocialMediaManager.Models.SocialPost
+  commentId: T:SocialMediaManager.Models.SocialPost
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.SocialPost.html
+  name: SocialPost
+  nameWithType: SocialPost
+  fullName: SocialMediaManager.Models.SocialPost
+- uid: System.Threading.CancellationToken
+  commentId: T:System.Threading.CancellationToken
+  parent: System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.cancellationtoken
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: System.Threading.CancellationToken
+- uid: System.Threading.Tasks.Task
+  commentId: T:System.Threading.Tasks.Task
+  parent: System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task
+  name: Task
+  nameWithType: Task
+  fullName: System.Threading.Tasks.Task
+- uid: SocialMediaManager.Models
+  commentId: N:SocialMediaManager.Models
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Models
+  nameWithType: SocialMediaManager.Models
+  fullName: SocialMediaManager.Models
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
+- uid: System.Threading
+  commentId: N:System.Threading
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading
+  nameWithType: System.Threading
+  fullName: System.Threading
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Threading
+    name: Threading
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading
+  - name: .
+  - uid: System.Threading.Tasks
+    name: Tasks
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks
+- uid: SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync*
+  commentId: Overload:SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync
+  href: SocialMediaManager.Services.ISocialMediaService.html#SocialMediaManager_Services_ISocialMediaService_GetReactionsAsync_SocialMediaManager_Models_SocialAccount_SocialMediaManager_Models_SocialPost_System_Threading_CancellationToken_
+  name: GetReactionsAsync
+  nameWithType: ISocialMediaService.GetReactionsAsync
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetReactionsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Reaction}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Reaction}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IList<Reaction>>
+  nameWithType: Task<IList<Reaction>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IList<SocialMediaManager.Models.Reaction>>
+  nameWithType.vb: Task(Of IList(Of Reaction))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IList(Of SocialMediaManager.Models.Reaction))
+  name.vb: Task(Of IList(Of Reaction))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: SocialMediaManager.Models.Reaction
+    name: Reaction
+    href: SocialMediaManager.Models.Reaction.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SocialMediaManager.Models.Reaction
+    name: Reaction
+    href: SocialMediaManager.Models.Reaction.html
+  - name: )
+  - name: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - name: TResult
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: TResult
+  - name: )
+- uid: SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync*
+  commentId: Overload:SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync
+  href: SocialMediaManager.Services.ISocialMediaService.html#SocialMediaManager_Services_ISocialMediaService_GetCommentsAsync_SocialMediaManager_Models_SocialAccount_SocialMediaManager_Models_SocialPost_System_Threading_CancellationToken_
+  name: GetCommentsAsync
+  nameWithType: ISocialMediaService.GetCommentsAsync
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetCommentsAsync
+- uid: System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Comment}}
+  commentId: T:System.Threading.Tasks.Task{System.Collections.Generic.IList{SocialMediaManager.Models.Comment}}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<IList<Comment>>
+  nameWithType: Task<IList<Comment>>
+  fullName: System.Threading.Tasks.Task<System.Collections.Generic.IList<SocialMediaManager.Models.Comment>>
+  nameWithType.vb: Task(Of IList(Of Comment))
+  fullName.vb: System.Threading.Tasks.Task(Of System.Collections.Generic.IList(Of SocialMediaManager.Models.Comment))
+  name.vb: Task(Of IList(Of Comment))
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: <
+  - uid: SocialMediaManager.Models.Comment
+    name: Comment
+    href: SocialMediaManager.Models.Comment.html
+  - name: '>'
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Collections.Generic.IList`1
+    name: IList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ilist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: SocialMediaManager.Models.Comment
+    name: Comment
+    href: SocialMediaManager.Models.Comment.html
+  - name: )
+  - name: )
+- uid: SocialMediaManager.Services.ISocialMediaService.GetViewsAsync*
+  commentId: Overload:SocialMediaManager.Services.ISocialMediaService.GetViewsAsync
+  href: SocialMediaManager.Services.ISocialMediaService.html#SocialMediaManager_Services_ISocialMediaService_GetViewsAsync_SocialMediaManager_Models_SocialAccount_SocialMediaManager_Models_SocialPost_System_Threading_CancellationToken_
+  name: GetViewsAsync
+  nameWithType: ISocialMediaService.GetViewsAsync
+  fullName: SocialMediaManager.Services.ISocialMediaService.GetViewsAsync
+- uid: System.Threading.Tasks.Task{System.Int32}
+  commentId: T:System.Threading.Tasks.Task{System.Int32}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  name: Task<int>
+  nameWithType: Task<int>
+  fullName: System.Threading.Tasks.Task<int>
+  nameWithType.vb: Task(Of Integer)
+  fullName.vb: System.Threading.Tasks.Task(Of Integer)
+  name.vb: Task(Of Integer)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.threading.tasks.task-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )

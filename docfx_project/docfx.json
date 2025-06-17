@@ -1,0 +1,22 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../",
+          "files": [ "social-media-manager.csproj" ]
+        }
+      ],
+      "dest": "api",
+      "properties": {
+        "TargetFramework": "net8.0"
+      }
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": [ "api/**.yml" ] }
+    ],
+    "dest": "_site"
+  }
+}

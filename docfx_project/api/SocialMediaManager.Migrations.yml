@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Migrations
+  commentId: N:SocialMediaManager.Migrations
+  id: SocialMediaManager.Migrations
+  children:
+  - SocialMediaManager.Migrations.AddPostPlatformsFields
+  - SocialMediaManager.Migrations.AddedTitleToPost
+  - SocialMediaManager.Migrations.InitialCreate
+  - SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Migrations
+  nameWithType: SocialMediaManager.Migrations
+  fullName: SocialMediaManager.Migrations
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Migrations.InitialCreate
+  commentId: T:SocialMediaManager.Migrations.InitialCreate
+  href: SocialMediaManager.Migrations.InitialCreate.html
+  name: InitialCreate
+  nameWithType: InitialCreate
+  fullName: SocialMediaManager.Migrations.InitialCreate
+- uid: SocialMediaManager.Migrations.AddedTitleToPost
+  commentId: T:SocialMediaManager.Migrations.AddedTitleToPost
+  href: SocialMediaManager.Migrations.AddedTitleToPost.html
+  name: AddedTitleToPost
+  nameWithType: AddedTitleToPost
+  fullName: SocialMediaManager.Migrations.AddedTitleToPost
+- uid: SocialMediaManager.Migrations.AddPostPlatformsFields
+  commentId: T:SocialMediaManager.Migrations.AddPostPlatformsFields
+  href: SocialMediaManager.Migrations.AddPostPlatformsFields.html
+  name: AddPostPlatformsFields
+  nameWithType: AddPostPlatformsFields
+  fullName: SocialMediaManager.Migrations.AddPostPlatformsFields
+- uid: SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum
+  commentId: T:SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum
+  href: SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum.html
+  name: Refactor_SocialAccount_UseEnum
+  nameWithType: Refactor_SocialAccount_UseEnum
+  fullName: SocialMediaManager.Migrations.Refactor_SocialAccount_UseEnum

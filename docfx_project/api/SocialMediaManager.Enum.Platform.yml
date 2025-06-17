@@ -1,0 +1,139 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Enum.Platform
+  commentId: T:SocialMediaManager.Enum.Platform
+  id: Platform
+  parent: SocialMediaManager.Enum
+  children:
+  - SocialMediaManager.Enum.Platform.Facebook
+  - SocialMediaManager.Enum.Platform.Instagram
+  - SocialMediaManager.Enum.Platform.X
+  langs:
+  - csharp
+  - vb
+  name: Platform
+  nameWithType: Platform
+  fullName: SocialMediaManager.Enum.Platform
+  type: Enum
+  source:
+    remote:
+      path: Models/Enum/Platform.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Platform
+    path: ../Models/Enum/Platform.cs
+    startLine: 2
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Enum
+  syntax:
+    content: public enum Platform
+    content.vb: Public Enum Platform
+- uid: SocialMediaManager.Enum.Platform.X
+  commentId: F:SocialMediaManager.Enum.Platform.X
+  id: X
+  parent: SocialMediaManager.Enum.Platform
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: Platform.X
+  fullName: SocialMediaManager.Enum.Platform.X
+  type: Field
+  source:
+    remote:
+      path: Models/Enum/Platform.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: X
+    path: ../Models/Enum/Platform.cs
+    startLine: 4
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Enum
+  syntax:
+    content: X = 0
+    return:
+      type: SocialMediaManager.Enum.Platform
+- uid: SocialMediaManager.Enum.Platform.Facebook
+  commentId: F:SocialMediaManager.Enum.Platform.Facebook
+  id: Facebook
+  parent: SocialMediaManager.Enum.Platform
+  langs:
+  - csharp
+  - vb
+  name: Facebook
+  nameWithType: Platform.Facebook
+  fullName: SocialMediaManager.Enum.Platform.Facebook
+  type: Field
+  source:
+    remote:
+      path: Models/Enum/Platform.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Facebook
+    path: ../Models/Enum/Platform.cs
+    startLine: 5
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Enum
+  syntax:
+    content: Facebook = 1
+    return:
+      type: SocialMediaManager.Enum.Platform
+- uid: SocialMediaManager.Enum.Platform.Instagram
+  commentId: F:SocialMediaManager.Enum.Platform.Instagram
+  id: Instagram
+  parent: SocialMediaManager.Enum.Platform
+  langs:
+  - csharp
+  - vb
+  name: Instagram
+  nameWithType: Platform.Instagram
+  fullName: SocialMediaManager.Enum.Platform.Instagram
+  type: Field
+  source:
+    remote:
+      path: Models/Enum/Platform.cs
+      branch: main
+      repo: https://github.com/BBkrzysztof/social-media-manager.git
+    id: Instagram
+    path: ../Models/Enum/Platform.cs
+    startLine: 6
+  assemblies:
+  - social-media-manager
+  namespace: SocialMediaManager.Enum
+  syntax:
+    content: Instagram = 2
+    return:
+      type: SocialMediaManager.Enum.Platform
+references:
+- uid: SocialMediaManager.Enum
+  commentId: N:SocialMediaManager.Enum
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Enum
+  nameWithType: SocialMediaManager.Enum
+  fullName: SocialMediaManager.Enum
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Enum
+    name: Enum
+    href: SocialMediaManager.Enum.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Enum
+    name: Enum
+    href: SocialMediaManager.Enum.html
+- uid: SocialMediaManager.Enum.Platform
+  commentId: T:SocialMediaManager.Enum.Platform
+  parent: SocialMediaManager.Enum
+  href: SocialMediaManager.Enum.Platform.html
+  name: Platform
+  nameWithType: Platform
+  fullName: SocialMediaManager.Enum.Platform

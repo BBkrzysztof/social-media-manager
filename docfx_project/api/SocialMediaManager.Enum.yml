@@ -1,0 +1,46 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Enum
+  commentId: N:SocialMediaManager.Enum
+  id: SocialMediaManager.Enum
+  children:
+  - SocialMediaManager.Enum.Platform
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Enum
+  nameWithType: SocialMediaManager.Enum
+  fullName: SocialMediaManager.Enum
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Enum.Platform
+  commentId: T:SocialMediaManager.Enum.Platform
+  parent: SocialMediaManager.Enum
+  href: SocialMediaManager.Enum.Platform.html
+  name: Platform
+  nameWithType: Platform
+  fullName: SocialMediaManager.Enum.Platform
+- uid: SocialMediaManager.Enum
+  commentId: N:SocialMediaManager.Enum
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Enum
+  nameWithType: SocialMediaManager.Enum
+  fullName: SocialMediaManager.Enum
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Enum
+    name: Enum
+    href: SocialMediaManager.Enum.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Enum
+    name: Enum
+    href: SocialMediaManager.Enum.html

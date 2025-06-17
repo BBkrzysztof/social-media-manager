@@ -1,0 +1,114 @@
+### YamlMime:ManagedReference
+items:
+- uid: SocialMediaManager.Models
+  commentId: N:SocialMediaManager.Models
+  id: SocialMediaManager.Models
+  children:
+  - SocialMediaManager.Models.BaseModel
+  - SocialMediaManager.Models.Comment
+  - SocialMediaManager.Models.EngagementMetrics
+  - SocialMediaManager.Models.ErrorViewModel
+  - SocialMediaManager.Models.Post
+  - SocialMediaManager.Models.Reaction
+  - SocialMediaManager.Models.SocialAccount
+  - SocialMediaManager.Models.SocialPost
+  - SocialMediaManager.Models.User
+  - SocialMediaManager.Models.ViewSnapshot
+  langs:
+  - csharp
+  - vb
+  name: SocialMediaManager.Models
+  nameWithType: SocialMediaManager.Models
+  fullName: SocialMediaManager.Models
+  type: Namespace
+  assemblies:
+  - social-media-manager
+references:
+- uid: SocialMediaManager.Models.BaseModel
+  commentId: T:SocialMediaManager.Models.BaseModel
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.BaseModel.html
+  name: BaseModel
+  nameWithType: BaseModel
+  fullName: SocialMediaManager.Models.BaseModel
+- uid: SocialMediaManager.Models.Comment
+  commentId: T:SocialMediaManager.Models.Comment
+  href: SocialMediaManager.Models.Comment.html
+  name: Comment
+  nameWithType: Comment
+  fullName: SocialMediaManager.Models.Comment
+- uid: SocialMediaManager.Models.EngagementMetrics
+  commentId: T:SocialMediaManager.Models.EngagementMetrics
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.EngagementMetrics.html
+  name: EngagementMetrics
+  nameWithType: EngagementMetrics
+  fullName: SocialMediaManager.Models.EngagementMetrics
+- uid: SocialMediaManager.Models.ErrorViewModel
+  commentId: T:SocialMediaManager.Models.ErrorViewModel
+  href: SocialMediaManager.Models.ErrorViewModel.html
+  name: ErrorViewModel
+  nameWithType: ErrorViewModel
+  fullName: SocialMediaManager.Models.ErrorViewModel
+- uid: SocialMediaManager.Models.Post
+  commentId: T:SocialMediaManager.Models.Post
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.Post.html
+  name: Post
+  nameWithType: Post
+  fullName: SocialMediaManager.Models.Post
+- uid: SocialMediaManager.Models.Reaction
+  commentId: T:SocialMediaManager.Models.Reaction
+  href: SocialMediaManager.Models.Reaction.html
+  name: Reaction
+  nameWithType: Reaction
+  fullName: SocialMediaManager.Models.Reaction
+- uid: SocialMediaManager.Models.SocialAccount
+  commentId: T:SocialMediaManager.Models.SocialAccount
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.SocialAccount.html
+  name: SocialAccount
+  nameWithType: SocialAccount
+  fullName: SocialMediaManager.Models.SocialAccount
+- uid: SocialMediaManager.Models.SocialPost
+  commentId: T:SocialMediaManager.Models.SocialPost
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.SocialPost.html
+  name: SocialPost
+  nameWithType: SocialPost
+  fullName: SocialMediaManager.Models.SocialPost
+- uid: SocialMediaManager.Models.User
+  commentId: T:SocialMediaManager.Models.User
+  parent: SocialMediaManager.Models
+  href: SocialMediaManager.Models.User.html
+  name: User
+  nameWithType: User
+  fullName: SocialMediaManager.Models.User
+- uid: SocialMediaManager.Models.ViewSnapshot
+  commentId: T:SocialMediaManager.Models.ViewSnapshot
+  href: SocialMediaManager.Models.ViewSnapshot.html
+  name: ViewSnapshot
+  nameWithType: ViewSnapshot
+  fullName: SocialMediaManager.Models.ViewSnapshot
+- uid: SocialMediaManager.Models
+  commentId: N:SocialMediaManager.Models
+  href: SocialMediaManager.html
+  name: SocialMediaManager.Models
+  nameWithType: SocialMediaManager.Models
+  fullName: SocialMediaManager.Models
+  spec.csharp:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
+  spec.vb:
+  - uid: SocialMediaManager
+    name: SocialMediaManager
+    href: SocialMediaManager.html
+  - name: .
+  - uid: SocialMediaManager.Models
+    name: Models
+    href: SocialMediaManager.Models.html
