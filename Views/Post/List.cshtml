@@ -9,21 +9,30 @@
 
         <!-- Filters -->
         <div class="row mb-5 ps-4 pe-4">
-            <div class="col-md-8 col-lg-10 col-xl-10 d-flex align-items-center">
+           <div class="col-md-8 col-lg-10 col-xl-10 d-flex align-items-center">
                 <div class="me-3">
                     <label class="form-label mb-0" for="filters-platform">Platform:</label>
                     <select id="filters-platform" class="form-select">
                         <option value="">All</option>
                         <option value="Facebook">Facebook</option>
-                        <option value="X">X</option>
-                        <option value="Instagram">Instagram</option>
                     </select>
                 </div>
                 <div class="me-3">
                     <label class="form-label mb-0" for="filters-date">Post date:</label>
                     <input id="filters-date" class="form-control" type="date" />
                 </div>
+                <div class="me-3">
+                    <label class="form-label mb-0" for="filters-size">Page size:</label>
+                        <select id="filters-size" class="form-select">
+                        <option value=2>2</option>
+                        <option value=4>4</option>
+                        <option value=8>8</option>
+                        <option value=16>16</option>
+                        <option value=32>32</option>
+                    </select>
+                </div>
             </div>
+            
             <div class="col-md-4 col-lg-2 col-xl-2 text-end">
                 <a class="btn btn-primary btn-sm" href="/post/create">Create new</a>
             </div>
@@ -45,11 +54,11 @@
 
 <script>
     let currentPage = 1;
-    const pageSize = 4;
 
     document.addEventListener('DOMContentLoaded', () => {
         document.getElementById('filters-platform').addEventListener('change', () => loadPosts(1));
         document.getElementById('filters-date').addEventListener('change', () => loadPosts(1));
+        document.getElementById('filters-size').addEventListener('change', () => loadPosts(1));
         document.getElementById('prev-page').addEventListener('click', () => loadPosts(currentPage - 1));
         document.getElementById('next-page').addEventListener('click', () => loadPosts(currentPage + 1));
         loadPosts(currentPage);
@@ -58,10 +67,10 @@
     function loadPosts(page) {
         const platform = document.getElementById('filters-platform').value;
         const date = document.getElementById('filters-date').value;
+        const pageSize = document.getElementById('filters-size').value;
 
         let url = `/list?page=${page}&pageSize=${pageSize}`;
-        // Add filtering later
-        // url += `&platform=${platform}&date=${date}`;
+        url += `&platform=${platform}&date=${date}`;
 
         fetch(url)
             .then(res => res.json())

@@ -42,17 +42,26 @@ public class PostController : Controller
     /// Returns paginated list of posts belonging to the current user as JSON. Can then be accessed with JavaScript fetch() without page reloading.
     /// </summary>
     [HttpGet("/list")]
-    public IActionResult Get(int page = 1, int pageSize = 10)
+    public IActionResult Get(int page = 1, int pageSize = 10, DateTime? date = null)
     {
         string userId = _userManager.GetUserId(User);
 
         if (page <= 0) page = 1;
         if (pageSize <= 0) pageSize = 10;
 
-        var totalItems = _context.Posts.Count();
+        var query = _context.Posts.Where(p => p.UserId == userId);
+
+        if (date.HasValue)
+        {
+            var targetDate = date.Value.Date;
+            query = query.Where(p => p.ScheduledAt.HasValue && p.ScheduledAt.Value.Date >= targetDate);
+        }
+
+        var totalItems = query.Count();
         var totalPages = (int)Math.Ceiling(totalItems / (double)pageSize);
 
-        var posts = _context.Posts
+        
+        var posts = query
             .OrderByDescending(p => p.CreatedAt)
             .Where(p => p.UserId == userId)
             .Skip((page - 1) * pageSize)
