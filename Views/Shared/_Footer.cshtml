@@ -6,8 +6,8 @@
                 <ul class="list-unstyled">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li><a href="/posts">Posts management</a></li>
-                        <li><a href="/posts/create">Posts creation</a></li>
+                        <li><a href="/post">Posts management</a></li>
+                        <li><a href="/post/create">Posts creation</a></li>
                         <li><a href="/social/OAuthPlatforms">Link social platforms</a></li>
                         <li><a href="/metrics">Metrics</a></li>
                     }
@@ -24,8 +24,8 @@
                 <ul class="list-unstyled">
                     @if (User.Identity.IsAuthenticated)
                     {
-                        <li><a href="/posts">See your posts</a></li>
-                        <li><a href="/posts/create">Create new</a></li>
+                        <li><a href="/post">See your posts</a></li>
+                        <li><a href="/post/create">Create new</a></li>
                     }
                 </ul>
             </div>
