@@ -3,6 +3,7 @@ using System.Text;
 using System.Text.Json;
 using SocialMediaManager.Models;
 using SocialMediaManager.Services.Exceptions;
+using Newtonsoft.Json;
 
 namespace SocialMediaManager.Services;
 
@@ -30,7 +31,7 @@ public class FacebookService : ISocialMediaService
     /// <param name="account">Social account linked to a Facebook Page.</param>
     /// <param name="post">Post content to be published.</param>
     /// <param name="cancellationToken">Optional cancellation token.</param>
-    public async Task PostAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
+    public async Task<string> PostAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
     {
         try
         {
@@ -45,12 +46,18 @@ public class FacebookService : ISocialMediaService
 
             var response = await _httpClient.SendAsync(request, cancellationToken);
             response.EnsureSuccessStatusCode();
+
+            var body = await response.Content.ReadAsStringAsync();
+            var result = JsonConvert.DeserializeObject<FacebookPostResponse>(body);
+
+            return result.Id;
         }
         catch (Exception ex)
         {
             _logger.LogError(ex, "Facebook post failed");
             throw new SocialMediaException("Failed to post on Facebook.", ex);
         }
+
     }
 
     /// <summary>
@@ -75,5 +82,10 @@ public class FacebookService : ISocialMediaService
     public async Task<int> GetViewsAsync(SocialAccount account, SocialPost post, CancellationToken cancellationToken = default)
     {
         return 0;
+    }
+
+    public class FacebookPostResponse
+    {
+        public string Id { get; set; }
     }
 }
